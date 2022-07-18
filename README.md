@@ -1,32 +1,22 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NodeJS cookbook
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Short Description
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This is a collection of samples related to NodeJS and NestJS with TypeScript. This repository is built as a NestJS 
+project and can be installed and run like any other NestJS project.
 
-## Description
+Quickstart and reference: [Table of contents](./doc/table_of_contents.md)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+See the Long description below for more details.
 
 ## Installation
+
+### Prerequisites
+
+- NodeJS 16
+- NestJS CLI 9
+
+### Installation
 
 ```bash
 $ npm install
@@ -47,27 +37,34 @@ $ npm run start:prod
 
 ## Test
 
-```bash
-# unit tests
-$ npm run test
+### JetBrains HTTP Client tests
 
-# e2e tests
-$ npm run test:e2e
+Each example is covered with `*.http` file which can be opened in and used by JetBrains tools (WebStorm, PHPStorm).
 
-# test coverage
-$ npm run test:cov
-```
+## Long description
 
-## Support
+All web applications, regardless of the language they are written in, have a set of core building blocks - like sending
+and receiving HTTP requests, reading environment variables and configuration values, handling controllers and CLI 
+commands... This project organizes examples in categories (directories/folders) with each category representing one of 
+these building blocks.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+The main idea behind this project is learning by examples. Intended audience are:
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Experienced programmers specialized in other languages or technologies who want to expand their toolset;
+  - By organizing examples in building block categories, experienced programmers, who are already well familiar with 
+    application building blocks but are coming from a different language (for example PHP or Java), can easily jump in 
+    and use Node and Nest while catching up with the syntax on the go.
+- Inexperienced programmers who want to have simple examples to go with the theory and official documentation;
+  - Reading theory and official documentation is good. Having concrete runnable examples to go along with the theory and
+    official documentation is better. Just remember that this project is only accompanying official documentation and is
+    not intended to be used alone.
+- All programmers to have a simple how-to examples to help them be more productive in their daily work;
+  - Instead of searching StackOverflow, read it here. The answers you can find here are all covered with tests which you 
+    can run and modify to your needs. You can also play with the code directly, if you need to test a specific idea or
+    requirement from your daily work.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+GNU GPL 3.0
+
+Full license is available in [LICENSE](./LICENSE) file.
