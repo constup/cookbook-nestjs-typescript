@@ -1,0 +1,11 @@
+POST localhost:3000/mix-post-get-payloads?param01="some string"&param02=123456&param03=false
+Accept: application/json
+Content-Type: application/json
+
+{
+  "sample_01": "dkjfhgkejrg",
+  "sample_02": 236427,
+  "sample_03": true
+}
+
+###

@@ -1,0 +1,3 @@
+GET localhost:3000/url-parameters?sample01="euyrvfjer"&sample02=12344&sampleo3=true
+
+###
