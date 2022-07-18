@@ -40,7 +40,7 @@ Jest tests are available for each example in the same directory. Jest tests file
 
 ### JetBrains HTTP Client tests
 
-Each example is covered with `*.http` file which can be opened in and used by JetBrains tools (WebStorm, PHPStorm).
+Each example is covered with `*.http` file which can be opened in and used by JetBrains IDEs (WebStorm, PHPStorm).
 
 ## Long description
 
