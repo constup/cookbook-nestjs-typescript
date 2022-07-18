@@ -36,7 +36,7 @@ $ npm run start:dev
 
 ### Jest
 
-Jest tests are available for each example in the same directory. Jest tests files are named `*.spec.ts`.
+Jest tests are available for each example in the same directory. These files are named `*.spec.ts`.
 
 ### JetBrains HTTP Client tests
 
