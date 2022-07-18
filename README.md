@@ -13,8 +13,8 @@ See the Long description below for more details.
 
 ### Prerequisites
 
-- NodeJS 16
-- NestJS CLI 9
+- NodeJS 16 ([Official Download and installation instructions](https://nodejs.org/en/download/))
+- NestJS CLI 9 ([Official Download and installation instructions](https://docs.nestjs.com/))
 
 ### Installation
 
@@ -30,12 +30,13 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Test
+
+### Jest
+
+Jest tests are available for each example in the same directory. Jest tests files are named `*.spec.ts`.
 
 ### JetBrains HTTP Client tests
 
