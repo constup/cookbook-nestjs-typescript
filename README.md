@@ -1,4 +1,4 @@
-# NodeJS cookbook
+# NodeJS TypeScript cookbook
 
 ## Short Description
 
@@ -7,14 +7,19 @@ project and can be installed and run like any other NestJS project.
 
 Quickstart and reference: [Table of contents](./doc/table_of_contents.md)
 
+The following main technologies are covered (all in TypeScript):
+
+- Vanilla NodeJS
+- NestJS
+
 See the Long description below for more details.
 
 ## Installation
 
 ### Prerequisites
 
-- NodeJS 16 ([Official Download and installation instructions](https://nodejs.org/en/download/))
-- NestJS CLI 9 ([Official Download and installation instructions](https://docs.nestjs.com/))
+- NodeJS 16 (<a href="https://nodejs.org/en/download/" target="_blank">Official Download and installation instructions</a>)
+- NestJS CLI 9 <a href="https://docs.nestjs.com/" target="_blank">Official Download and installation instructions</a>
 
 ### Installation
 
