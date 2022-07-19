@@ -45,7 +45,8 @@ Jest tests are available for each example in the same directory. These files are
 
 ### JetBrains HTTP Client tests
 
-Each example is covered with `*.http` file which can be opened in and used by JetBrains IDEs (WebStorm, PHPStorm).
+Examples contain `*.http` files which can be opened in and used by JetBrains IDEs (WebStorm, PHPStorm). These files 
+contain commands which can be run by JetBrains HTTP Client (built into the IDE).
 
 ## Long description
 
@@ -68,6 +69,12 @@ The main idea behind this project is learning by examples. Intended audience are
   - Instead of searching StackOverflow, read it here. The answers you can find here are all covered with tests which you 
     can run and modify to your needs. You can also play with the code directly, if you need to test a specific idea or
     requirement from your daily work.
+
+## Contribution
+
+You are free to contribute to this repository, either by expanding existing examples or adding your own. There are,
+however, certain rules to follow in order to keep the examples consistent and easy to use. You can read more about it in
+[Contribution guidelines](./doc/contribution_guidelines.md).
 
 ## License
 
