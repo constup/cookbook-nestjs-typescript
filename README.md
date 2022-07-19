@@ -18,8 +18,8 @@ See the Long description below for more details.
 
 ### Prerequisites
 
-- NodeJS 16 (<a href="https://nodejs.org/en/download/" target="_blank">Official Download and installation instructions</a>)
-- NestJS CLI 9 <a href="https://docs.nestjs.com/" target="_blank">Official Download and installation instructions</a>
+- NodeJS 16 ([Official Download and installation instructions](https://nodejs.org/en/download/))
+- NestJS CLI 9 ([Official Download and installation instructions](https://docs.nestjs.com/))
 
 ### Installation
 
