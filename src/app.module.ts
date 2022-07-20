@@ -47,6 +47,12 @@ import {
 import {
   OtherProvidersAsPropertiesController
 } from "./nestjs/framework-constructs/providers/other-providers-as-properties/other-providers-as-properties/other-providers-as-properties.controller";
+import {
+  MakeGetRequestController
+} from "./nestjs/requests/outgoing/make-get-request/make-get-request/make-get-request.controller";
+import {
+  ReturnJsonPayloadController
+} from "./nestjs/responses/simple-json-response/return-json-payload/return-json-payload.controller";
 
 @Module({
   imports: [
@@ -66,7 +72,9 @@ import {
     ScalarPropertiesNoDefaultControllerController,
     NonInjectableClassAsProviderController,
     InterfacesAsPropertiesController,
-    OtherProvidersAsPropertiesController
+    OtherProvidersAsPropertiesController,
+    MakeGetRequestController,
+    ReturnJsonPayloadController
   ],
   providers: [
     AppService,

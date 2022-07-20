@@ -1,0 +1,19 @@
+GET localhost:3000/return-json-payload/simple
+
+###
+// This should retrurn HTTP 500 with no response body.
+GET localhost:3000/return-json-payload/multiple-possible-response-codes
+
+###
+// This should return HTTP 200 with a sample payload.
+GET localhost:3000/return-json-payload/multiple-possible-response-codes?mode=test
+
+###
+// This should return HTTP 202 with a sample payload.
+GET localhost:3000/return-json-payload/multiple-possible-response-codes?mode=accepted
+
+###
+// This should return HTTP 403 with no payload.
+GET localhost:3000/return-json-payload/multiple-possible-response-codes?nomode=true
+
+###
