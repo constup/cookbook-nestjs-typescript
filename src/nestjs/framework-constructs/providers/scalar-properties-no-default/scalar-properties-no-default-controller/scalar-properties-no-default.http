@@ -1,0 +1,11 @@
+GET localhost:3000/scalar-properties-no-default-controller
+
+###
+
+GET localhost:3000/scalar-properties-no-default-controller/no-provider-changes
+
+###
+
+GET localhost:3000/scalar-properties-no-default-controller/one-property-change
+
+###

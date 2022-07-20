@@ -1,0 +1,8 @@
+// Note: this should throw an error: ERROR [ExceptionsHandler] Cannot read properties of undefined (reading 'doSomethingElse'
+GET localhost:3000/non-injectable-class-as-provider
+
+###
+
+GET localhost:3000/non-injectable-class-as-provider/not-using-object-property
+
+###

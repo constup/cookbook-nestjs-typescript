@@ -1,0 +1,11 @@
+GET localhost:3000/interfaces-as-properties
+
+###
+// This should trow an error (see noObjectCreation() comment in interfaces-as-properties.controller.ts for more details):
+// ERROR [ExceptionsHandler] Cannot read properties of undefined (reading 'doSomething')
+GET localhost:3000/interfaces-as-properties/no-object-creation
+
+###
+GET localhost:3000/interfaces-as-properties/no-object-creation-no-touch
+
+###

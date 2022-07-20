@@ -1,0 +1,7 @@
+GET localhost:3000/other-providers-as-properties/controller-injection
+
+###
+GET localhost:3000/other-providers-as-properties/property-injection
+
+###
+
