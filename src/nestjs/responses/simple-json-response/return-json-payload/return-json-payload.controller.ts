@@ -47,6 +47,10 @@ export class ReturnJsonPayloadController {
    *
    * Please note that there are many ways to return different types of responses and that this is only one of them.
    *
+   * This example uses techniques described in
+   * src/nestjs/requests/incoming/read-request-payload/url-parameters/url-parameters.controller.ts
+   * to fetch URL parameters.
+   *
    * @param query
    * @param response
    */
