@@ -1,3 +1,10 @@
-GET localhost:3000/url-parameters?sample01="euyrvfjer"&sample02=12344&sampleo3=true
+GET localhost:3000/url-parameters/all-parameters?sample01="euyrvfjer"&sample02=12344&sampleo3=true
+
+###
+GET localhost:3000/url-parameters/mode-parameter-value?mode=123456
+
+###
+// "mode" parameter is missing from the URL. "Undefined" will be returned.
+GET localhost:3000/url-parameters/mode-parameter-value?nomode=true
 
 ###
