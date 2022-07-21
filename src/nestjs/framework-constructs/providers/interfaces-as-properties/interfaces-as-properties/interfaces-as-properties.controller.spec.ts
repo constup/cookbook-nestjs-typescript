@@ -9,7 +9,9 @@ describe('InterfacesAsPropertiesController', () => {
       controllers: [InterfacesAsPropertiesController],
     }).compile();
 
-    controller = module.get<InterfacesAsPropertiesController>(InterfacesAsPropertiesController);
+    controller = module.get<InterfacesAsPropertiesController>(
+      InterfacesAsPropertiesController,
+    );
   });
 
   it('should be defined', () => {

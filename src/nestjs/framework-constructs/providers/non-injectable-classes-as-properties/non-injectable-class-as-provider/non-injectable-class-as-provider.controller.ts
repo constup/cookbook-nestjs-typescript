@@ -1,9 +1,11 @@
-import {Controller, Get} from '@nestjs/common';
-import {NonInjectableClassAsProvider} from "../non-injectable-class-as-provider";
+import { Controller, Get } from '@nestjs/common';
+import { NonInjectableClassAsProvider } from '../non-injectable-class-as-provider';
 
 @Controller('non-injectable-class-as-provider')
 export class NonInjectableClassAsProviderController {
-  constructor(private nonInjectableClassAsProvider: NonInjectableClassAsProvider) {}
+  constructor(
+    private nonInjectableClassAsProvider: NonInjectableClassAsProvider,
+  ) {}
 
   /**
    * This will throw the following error:
@@ -22,6 +24,6 @@ export class NonInjectableClassAsProviderController {
    */
   @Get('not-using-object-property')
   noUsingObjectProperty(): string {
-    return 'This method does not use object\'s property, which is a non-injectable class, but the provider still has it as a property. And it, surprisingly, works.'
+    return "This method does not use object's property, which is a non-injectable class, but the provider still has it as a property. And it, surprisingly, works.";
   }
 }

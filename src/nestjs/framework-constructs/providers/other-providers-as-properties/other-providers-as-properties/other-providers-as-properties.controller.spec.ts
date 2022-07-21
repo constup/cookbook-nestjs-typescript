@@ -9,7 +9,9 @@ describe('OtherProvidersAsPropertiesController', () => {
       controllers: [OtherProvidersAsPropertiesController],
     }).compile();
 
-    controller = module.get<OtherProvidersAsPropertiesController>(OtherProvidersAsPropertiesController);
+    controller = module.get<OtherProvidersAsPropertiesController>(
+      OtherProvidersAsPropertiesController,
+    );
   });
 
   it('should be defined', () => {

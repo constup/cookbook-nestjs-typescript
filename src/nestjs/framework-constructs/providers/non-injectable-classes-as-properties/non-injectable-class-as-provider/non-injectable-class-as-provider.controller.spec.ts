@@ -9,7 +9,9 @@ describe('NonInjectableClassAsProviderController', () => {
       controllers: [NonInjectableClassAsProviderController],
     }).compile();
 
-    controller = module.get<NonInjectableClassAsProviderController>(NonInjectableClassAsProviderController);
+    controller = module.get<NonInjectableClassAsProviderController>(
+      NonInjectableClassAsProviderController,
+    );
   });
 
   it('should be defined', () => {

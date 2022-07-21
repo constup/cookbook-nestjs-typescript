@@ -1,5 +1,5 @@
-import {Controller, Get} from '@nestjs/common';
-import {ScalarPropertiesNoDefault} from "../scalar-properties-no-default";
+import { Controller, Get } from '@nestjs/common';
+import { ScalarPropertiesNoDefault } from '../scalar-properties-no-default';
 
 @Controller('scalar-properties-no-default-controller')
 export class ScalarPropertiesNoDefaultControllerController {
@@ -13,7 +13,12 @@ export class ScalarPropertiesNoDefaultControllerController {
     this.sampleProvider.numberProperty = 9;
     this.sampleProvider.stringProperty = 'test';
     this.sampleProvider.arrayProperty = [];
-    this.sampleProvider.arrayProperty.push('sample1', 'sample2', 'sample3', this.sampleProvider.stringProperty);
+    this.sampleProvider.arrayProperty.push(
+      'sample1',
+      'sample2',
+      'sample3',
+      this.sampleProvider.stringProperty,
+    );
 
     return JSON.stringify(this.sampleProvider);
   }

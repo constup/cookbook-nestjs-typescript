@@ -9,7 +9,9 @@ describe('NonInjectableClassAsProvider', () => {
       providers: [NonInjectableClassAsProvider],
     }).compile();
 
-    provider = module.get<NonInjectableClassAsProvider>(NonInjectableClassAsProvider);
+    provider = module.get<NonInjectableClassAsProvider>(
+      NonInjectableClassAsProvider,
+    );
   });
 
   it('should be defined', () => {

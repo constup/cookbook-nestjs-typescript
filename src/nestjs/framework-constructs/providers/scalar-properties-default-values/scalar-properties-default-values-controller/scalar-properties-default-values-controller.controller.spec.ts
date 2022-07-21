@@ -9,7 +9,9 @@ describe('ScalarPropertiesDefaultValuesControllerController', () => {
       controllers: [ScalarPropertiesDefaultValuesControllerController],
     }).compile();
 
-    controller = module.get<ScalarPropertiesDefaultValuesControllerController>(ScalarPropertiesDefaultValuesControllerController);
+    controller = module.get<ScalarPropertiesDefaultValuesControllerController>(
+      ScalarPropertiesDefaultValuesControllerController,
+    );
   });
 
   it('should be defined', () => {

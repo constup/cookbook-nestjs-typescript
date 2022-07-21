@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import {NonInjectableClass} from "./non-injectable-class";
+import { NonInjectableClass } from './non-injectable-class';
 
 @Injectable()
 export class NonInjectableClassAsProvider {

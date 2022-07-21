@@ -9,7 +9,9 @@ describe('ProviderWithProviderProperties', () => {
       providers: [ProviderWithProviderProperties],
     }).compile();
 
-    provider = module.get<ProviderWithProviderProperties>(ProviderWithProviderProperties);
+    provider = module.get<ProviderWithProviderProperties>(
+      ProviderWithProviderProperties,
+    );
   });
 
   it('should be defined', () => {

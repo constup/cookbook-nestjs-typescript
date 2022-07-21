@@ -1,5 +1,5 @@
-import {Controller, Get} from '@nestjs/common';
-import {ScalarPropertiesDefaultValuesProvider} from "../scalar-properties-default-values-provider";
+import { Controller, Get } from '@nestjs/common';
+import { ScalarPropertiesDefaultValuesProvider } from '../scalar-properties-default-values-provider';
 
 @Controller('scalar-properties-default-values-controller')
 export class ScalarPropertiesDefaultValuesControllerController {

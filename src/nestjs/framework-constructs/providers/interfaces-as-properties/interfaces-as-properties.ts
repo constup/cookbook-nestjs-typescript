@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import {SampleInterface} from "./sample-interface.interface";
+import { SampleInterface } from './sample-interface.interface';
 
 @Injectable()
-export class InterfacesAsProperties{
+export class InterfacesAsProperties {
   sampleInterface: SampleInterface;
 }

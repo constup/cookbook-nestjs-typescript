@@ -9,7 +9,9 @@ describe('ScalarPropertiesDefaultValuesProvider', () => {
       providers: [ScalarPropertiesDefaultValuesProvider],
     }).compile();
 
-    provider = module.get<ScalarPropertiesDefaultValuesProvider>(ScalarPropertiesDefaultValuesProvider);
+    provider = module.get<ScalarPropertiesDefaultValuesProvider>(
+      ScalarPropertiesDefaultValuesProvider,
+    );
   });
 
   it('should be defined', () => {

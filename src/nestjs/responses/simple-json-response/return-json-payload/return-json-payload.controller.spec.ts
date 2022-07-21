@@ -9,7 +9,9 @@ describe('ReturnJsonPayloadController', () => {
       controllers: [ReturnJsonPayloadController],
     }).compile();
 
-    controller = module.get<ReturnJsonPayloadController>(ReturnJsonPayloadController);
+    controller = module.get<ReturnJsonPayloadController>(
+      ReturnJsonPayloadController,
+    );
   });
 
   it('should be defined', () => {

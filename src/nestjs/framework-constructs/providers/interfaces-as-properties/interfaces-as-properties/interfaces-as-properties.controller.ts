@@ -1,6 +1,6 @@
-import {Controller, Get} from '@nestjs/common';
-import {InterfacesAsProperties} from "../interfaces-as-properties";
-import {ConcreteClass01} from "../concrete-class01";
+import { Controller, Get } from '@nestjs/common';
+import { InterfacesAsProperties } from '../interfaces-as-properties';
+import { ConcreteClass01 } from '../concrete-class01';
 
 @Controller('interfaces-as-properties')
 export class InterfacesAsPropertiesController {
@@ -43,10 +43,11 @@ export class InterfacesAsPropertiesController {
    * interface is accessed.
    */
   @Get('no-object-creation-no-touch')
-  noObjectCreationNoTouch(): string
-  {
-    return "This controller uses a provider which has an interface as a property. Even though the interface was <br>" +
+  noObjectCreationNoTouch(): string {
+    return (
+      'This controller uses a provider which has an interface as a property. Even though the interface was <br>' +
       "never implemented (a concrete class has never been assigned to the property), as long as the provider isn't <br>" +
-      "touched, the code will work (this message will be shown).";
+      'touched, the code will work (this message will be shown).'
+    );
   }
 }

@@ -1,9 +1,11 @@
-import {Controller, Get, Inject} from '@nestjs/common';
-import {ProviderWithProviderProperties} from "../provider-with-provider-properties";
+import { Controller, Get, Inject } from '@nestjs/common';
+import { ProviderWithProviderProperties } from '../provider-with-provider-properties';
 
 @Controller('other-providers-as-properties')
 export class OtherProvidersAsPropertiesController {
-  constructor(private constructorInjectionPropertyExample: ProviderWithProviderProperties) {}
+  constructor(
+    private constructorInjectionPropertyExample: ProviderWithProviderProperties,
+  ) {}
 
   @Inject(ProviderWithProviderProperties)
   private propertyInjectionPropertyExample: ProviderWithProviderProperties;
@@ -13,7 +15,10 @@ export class OtherProvidersAsPropertiesController {
    */
   @Get('controller-injection')
   constructorInjectionExample(): string {
-    return "Injected through a constructor.<br>" + this.constructorInjectionPropertyExample.doSomething();
+    return (
+      'Injected through a constructor.<br>' +
+      this.constructorInjectionPropertyExample.doSomething()
+    );
   }
 
   /**
@@ -26,6 +31,9 @@ export class OtherProvidersAsPropertiesController {
    */
   @Get('property-injection')
   propertyInjectionExample(): string {
-    return "Injected through a property.<br>" + this.propertyInjectionPropertyExample.doSomething();
+    return (
+      'Injected through a property.<br>' +
+      this.propertyInjectionPropertyExample.doSomething()
+    );
   }
 }
