@@ -11,12 +11,8 @@ export class PostPayloadController {
    */
   @Post()
   getPostPayload(@Body() postPayloadData: PostPayloadData): string {
-    let text: string;
-
-    text = `POST payload data (stored in PostPayloadData DTO): <pre>${JSON.stringify(
+    return `POST payload data (stored in PostPayloadData DTO): <pre>${JSON.stringify(
       postPayloadData,
     )}</pre>`;
-
-    return text;
   }
 }
