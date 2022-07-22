@@ -17,7 +17,6 @@ import { ScalarPropertiesNoDefault } from './nestjs/framework-constructs/provide
 import { ScalarPropertiesNoDefaultControllerController } from './nestjs/framework-constructs/providers/scalar-properties-no-default/scalar-properties-no-default-controller/scalar-properties-no-default-controller.controller';
 import { NonInjectableClassAsProviderController } from './nestjs/framework-constructs/providers/non-injectable-classes-as-properties/non-injectable-class-as-provider/non-injectable-class-as-provider.controller';
 import { NonInjectableClassAsProvider } from './nestjs/framework-constructs/providers/non-injectable-classes-as-properties/non-injectable-class-as-provider';
-import { NonInjectableClass } from './nestjs/framework-constructs/providers/non-injectable-classes-as-properties/non-injectable-class';
 import { InterfacesAsPropertiesController } from './nestjs/framework-constructs/providers/interfaces-as-properties/interfaces-as-properties/interfaces-as-properties.controller';
 import { InterfacesAsProperties } from './nestjs/framework-constructs/providers/interfaces-as-properties/interfaces-as-properties';
 import { ProviderAsProperty } from './nestjs/framework-constructs/providers/other-providers-as-properties/provider-as-property';
@@ -26,6 +25,7 @@ import { OtherProvidersAsPropertiesController } from './nestjs/framework-constru
 import { MakeGetRequestController } from './nestjs/requests/outgoing/make-get-request/make-get-request/make-get-request.controller';
 import { ReturnJsonPayloadController } from './nestjs/responses/simple-json-response/return-json-payload/return-json-payload.controller';
 import { MakePostRequestController } from './nestjs/requests/outgoing/make-get-request/make-post-request/make-post-request/make-post-request.controller';
+import { ImmutableObjectsController } from './typescript/classes-and-objects/immutable-objects/immutable-objects.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -46,6 +46,7 @@ import { MakePostRequestController } from './nestjs/requests/outgoing/make-get-r
     MakeGetRequestController,
     ReturnJsonPayloadController,
     MakePostRequestController,
+    ImmutableObjectsController,
   ],
   providers: [
     AppService,
