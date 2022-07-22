@@ -19,12 +19,12 @@ implementation with autowiring (like Symfony, a PHP framework, has). To use depe
 
 There are several examples here to address different types of classes (each in their own example folder):
 
-- **[interfaces as properties](./interfaces-as-properties)**: An example of a provider with interfaces as properties.
-- **[other providers as properties](./other-providers-as-properties)**: An example of a provider which has other 
+- **[interfaces as properties](interfaces-as-properties)**: An example of a provider with interfaces as properties.
+- **[other providers as properties](other-providers-as-properties)**: An example of a provider which has other 
   providers as its properties.
-- **[non-injectable classes as properties](./non-injectable-classes-as-properties)**: An example of a provider which has
+- **[non-injectable classes as properties](non-injectable-classes-as-properties)**: An example of a provider which has
   other classes as properties. The classes are not marked as "injectable"
-- **[scalar properties default values](./scalar-properties-default-values)**: An example of a provider with scalar 
+- **[scalar properties default values](scalar-properties-default-values)**: An example of a provider with scalar 
   properties which have default values defined.
-- **[scalar properties no default values](./scalar-properties-no-default)**: An example of a provider with scalar 
+- **[scalar properties no default values](scalar-properties-no-default)**: An example of a provider with scalar 
   properties and no default values defined.

@@ -40,15 +40,15 @@ export class ReturnJsonPayloadController {
   /**
    * If you need to pick which response to return, you can't use decorators as in the example above. In this case, you
    * can use @Res() decorator on a Response (imported from express) property and configure each of the possible
-   * responses manually.
+   * http-responses manually.
    *
    * This example looks for URL parameter called "mode" and returns different payloads and HTTP response codes based on
    * the value of "mode".
    *
-   * Please note that there are many ways to return different types of responses and that this is only one of them.
+   * Please note that there are many ways to return different types of http-responses and that this is only one of them.
    *
    * This example uses techniques described in
-   * src/nestjs/requests/incoming/read-request-payload/url-parameters/url-parameters.controller.ts
+   * src/nestjs/http-requests/incoming/read-request-payload/url-parameters/url-parameters.controller.ts
    * to fetch URL parameters.
    *
    * @param query

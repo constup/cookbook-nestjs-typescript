@@ -1,7 +1,7 @@
 GET localhost:3000/return-json-payload/simple
 
 ###
-// This should retrurn HTTP 500 with no response body.
+// This should retrurn HTTP 403 with no response body.
 GET localhost:3000/return-json-payload/multiple-possible-response-codes
 
 ###
