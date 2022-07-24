@@ -5,8 +5,8 @@
 - TypeScript
   - Classes and Objects
     - [Class samples (showcase only, used in other concrete examples)](../src/typescript/classes-and-objects/class-samples/)
-      - Classic immutable object
-      - Encapsulated class
+      - _Classic immutable object_
+      - _Encapsulated class_
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
 - NodeJS
 - NestJS
