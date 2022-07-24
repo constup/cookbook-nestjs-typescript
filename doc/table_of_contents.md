@@ -9,7 +9,7 @@
       - _Encapsulated class_
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
   - ***Promises***
-    - [Creating and consuming a simple Promise](../src/typescript/promises/creating-and-consuming-simple-promise)
+    - [Creating and consuming a simple Promise](../src/typescript/promises/simple-promise-returning-string)
 - **NodeJS**
 - **NestJS**
   - **Version 9**

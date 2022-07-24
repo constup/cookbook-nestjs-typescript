@@ -45,8 +45,9 @@ Jest tests are available for each example in the same directory. These files are
 
 ### JetBrains HTTP Client tests
 
-Examples contain `*.http` files which can be opened in and used by JetBrains IDEs (WebStorm, PHPStorm). These files 
-contain commands which can be run by JetBrains HTTP Client (built into the IDE).
+Examples contain `*.http` files which can be opened in and used by JetBrains IDEs 
+([WebStorm](https://www.jetbrains.com/webstorm/), [PHPStorm](https://www.jetbrains.com/phpstorm/)). These files contain 
+commands which can be run by JetBrains HTTP Client (built into the IDE).
 
 Examples in this repository are all showcased in controllers. This is done so that you can actually run the example code
 without doing anything extra - no tests, no mocks, just running the examples directly as if it's a production 
