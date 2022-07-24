@@ -1,6 +1,6 @@
 /**
  * This example shows that objects can be passed to the resolve() and reject() functions and returned by the Promise.
- * You would fetch the resulting object the same way as in the "simple-promise-returning-string" example.
+ * You would fetch the resulting object the same way as in the "01-simple-promise-returning-string" example.
  *
  * @see promiseReturningObject
  */

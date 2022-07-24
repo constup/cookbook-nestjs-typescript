@@ -26,13 +26,13 @@ import { MakeGetRequestController } from './nestjs/version-9/http/http-requests/
 import { ReturnJsonPayloadController } from './nestjs/version-9/http/http-responses/simple-json-response/return-json-payload/return-json-payload.controller';
 import { MakePostRequestController } from './nestjs/version-9/http/http-requests/outgoing/make-post-request/make-post-request/make-post-request.controller';
 import { ImmutableObjectsController } from './typescript/classes-and-objects/immutable-objects/immutable-objects.controller';
-import { SimplePromiseController } from './typescript/promises/simple-promise-returning-string/simple-promise.controller';
+import { SimplePromiseController } from './typescript/promises/01-simple-promise-returning-string/simple-promise.controller';
 import {
   PromiseReturningObjectController
-} from './typescript/promises/promise-returning-object/promise-returning-object.controller';
+} from './typescript/promises/02-promise-returning-object/promise-returning-object.controller';
 import {
   PromiseReturningDifferentTypesController
-} from './typescript/promises/promise-returning-different-types/promise-returning-different-types.controller';
+} from './typescript/promises/03-promise-returning-different-types/promise-returning-different-types.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],

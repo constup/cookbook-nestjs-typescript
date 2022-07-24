@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { promiseReturningDifferentTypesFunction } from './promise-returning-different-types';
 
-@Controller('promise-returning-different-types')
+@Controller('03-promise-returning-different-types')
 export class PromiseReturningDifferentTypesController {
   @Get('simple-resolve-reject')
   async promiseReturningDifferentTypes(): Promise<string> {

@@ -9,8 +9,8 @@
       - _Encapsulated class_
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
   - ***Promises***
-    - [Simple promise returning string](../src/typescript/promises/simple-promise-returning-string)
-    - [Promise returning object](../src/typescript/promises/promise-returning-object)
+    - [Simple promise returning string](../src/typescript/promises/01-simple-promise-returning-string)
+    - [Promise returning object](../src/typescript/promises/02-promise-returning-object)
 - **NodeJS**
 - **NestJS**
   - **Version 9**
