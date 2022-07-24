@@ -7,10 +7,11 @@ project and can be installed and run like any other NestJS project.
 
 Quickstart and reference: [Table of contents](./doc/table_of_contents.md)
 
-The following main technologies are covered (all in TypeScript):
+The following main technologies are covered:
 
-- Vanilla NodeJS
-- NestJS
+- TypeScript
+- Vanilla NodeJS (in TypeScript)
+- NestJS (in TypeScript)
 
 See the Long description below for more details.
 
