@@ -30,6 +30,9 @@ import { SimplePromiseController } from './typescript/promises/simple-promise-re
 import {
   PromiseReturningObjectController
 } from './typescript/promises/promise-returning-object/promise-returning-object.controller';
+import {
+  PromiseReturningDifferentTypesController
+} from './typescript/promises/promise-returning-different-types/promise-returning-different-types.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -53,6 +56,7 @@ import {
     ImmutableObjectsController,
     SimplePromiseController,
     PromiseReturningObjectController,
+    PromiseReturningDifferentTypesController
   ],
   providers: [
     AppService,
