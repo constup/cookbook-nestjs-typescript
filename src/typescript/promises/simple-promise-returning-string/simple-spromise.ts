@@ -18,6 +18,11 @@
  *            } catch (error) {
  *              console.log(error);
  *            }
+ *  - What is the return type of a function returning a Promise?
+ *    - Return type, in our case, is:
+ *        Promise<string>
+ *      Whatever the type your successPayload in `resolve(successPayload)` is, you should use it as the internal type of
+ *      a Promise.
  *  - How to pass a parameter/variable to a Promise and use it inside?
  *    - You can, for example, wrap a Promise in a function and use function's arguments inside the Promise.
  *  - What not to do in a Promise?
@@ -26,7 +31,7 @@
  *
  * @see simplePromiseExample
  */
-export const somePromiseFunction = (sampleNumber: number) => {
+export const somePromiseFunction = (sampleNumber: number): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (sampleNumber === 1) {
       // If you call somePromiseFunction(1), the Promise will resolve and return 'Correct number'.

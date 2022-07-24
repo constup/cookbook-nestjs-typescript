@@ -27,6 +27,9 @@ import { ReturnJsonPayloadController } from './nestjs/version-9/http/http-respon
 import { MakePostRequestController } from './nestjs/version-9/http/http-requests/outgoing/make-post-request/make-post-request/make-post-request.controller';
 import { ImmutableObjectsController } from './typescript/classes-and-objects/immutable-objects/immutable-objects.controller';
 import { SimplePromiseController } from './typescript/promises/simple-promise-returning-string/simple-promise.controller';
+import {
+  PromiseReturningObjectController
+} from './typescript/promises/promise-returning-object/promise-returning-object.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -49,6 +52,7 @@ import { SimplePromiseController } from './typescript/promises/simple-promise-re
     MakePostRequestController,
     ImmutableObjectsController,
     SimplePromiseController,
+    PromiseReturningObjectController,
   ],
   providers: [
     AppService,
