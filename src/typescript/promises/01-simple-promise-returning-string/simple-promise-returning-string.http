@@ -1,4 +1,4 @@
-GET localhost:3000/simple-promise/simple-resolve-reject
+GET localhost:3000/simple-promise-returning-string/simple-resolve-reject
 
 ###
 GET localhost:3000/simple-promise/simple-promise-external-variables

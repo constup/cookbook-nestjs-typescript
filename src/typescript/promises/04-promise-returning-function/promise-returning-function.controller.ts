@@ -1,11 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
-import { promiseWarpperFunction } from './promise-returning-function';
+import { promiseWrapperFunction } from './promise-returning-function';
 
 @Controller('promise-returning-function')
 export class PromiseReturningFunctionController {
   @Get('simple-function')
   async promiseReturningFunction() {
-    const promiseReturningFunction = await promiseWarpperFunction();
+    const promiseReturningFunction = await promiseWrapperFunction();
 
     let result = `The Promise was already called and fulfilled in the previous line of code.
     However, the Promise didn't return a string, but a function which returns a string. 

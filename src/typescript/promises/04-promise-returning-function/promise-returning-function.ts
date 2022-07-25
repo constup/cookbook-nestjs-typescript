@@ -16,7 +16,7 @@
  *
  * Note: The reject() was omitted because it's not relevant for this example.
  */
-export const promiseWarpperFunction = (): Promise<
+export const promiseWrapperFunction = (): Promise<
   (stringParameter: string, numberParameter: number) => string
 > => {
   return new Promise((resolve) => {

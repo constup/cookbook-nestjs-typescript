@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
-import { promiseReturningObjectFunction } from './promise-returning-object';
+import { promiseReturningObjectFunction } from './promise-returning-simple-data-object';
 
-@Controller('02-promise-returning-object')
-export class PromiseReturningObjectController {
+@Controller('promise-returning-simple-data-object')
+export class PromiseReturningSimpleDataObjectController {
   /**
    * This example shows that objects can be passed to the resolve() and reject() functions and returned by the Promise.
    * You would fetch the resulting object the same way as in the "01-simple-promise-returning-string" example.

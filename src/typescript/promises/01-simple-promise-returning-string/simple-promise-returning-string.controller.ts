@@ -1,8 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
-import { PromiseSampleClass, somePromiseFunction } from './simple-spromise';
+import {
+  PromiseSampleClass,
+  somePromiseFunction,
+} from './simple-promise-returning-string';
 
-@Controller('simple-promise')
-export class SimplePromiseController {
+@Controller('simple-promise-returning-string')
+export class SimplePromiseReturningStringController {
   /**
    * @see somePromiseFunction
    */
