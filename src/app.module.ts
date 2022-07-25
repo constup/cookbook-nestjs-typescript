@@ -26,16 +26,16 @@ import { MakeGetRequestController } from './nestjs/version-9/http/http-requests/
 import { ReturnJsonPayloadController } from './nestjs/version-9/http/http-responses/simple-json-response/return-json-payload/return-json-payload.controller';
 import { MakePostRequestController } from './nestjs/version-9/http/http-requests/outgoing/make-post-request/make-post-request/make-post-request.controller';
 import { ImmutableObjectsController } from './typescript/classes-and-objects/immutable-objects/immutable-objects.controller';
-import { SimplePromiseReturningStringController } from './typescript/promises/01-simple-promise-returning-string/simple-promise-returning-string.controller';
+import { SimplePromiseReturningStringController } from './typescript/promises/creation-and-basic-use/01-simple-promise-returning-string/simple-promise-returning-string.controller';
 import {
   PromiseReturningSimpleDataObjectController
-} from './typescript/promises/02-promise-returning-simple-data-object/promise-returning-simple-data-object.controller';
+} from './typescript/promises/creation-and-basic-use/02-promise-returning-simple-data-object/promise-returning-simple-data-object.controller';
 import {
   PromiseReturningDifferentTypesController
-} from './typescript/promises/03-promise-returning-different-types/promise-returning-different-types.controller';
+} from './typescript/promises/creation-and-basic-use/03-promise-returning-different-types/promise-returning-different-types.controller';
 import {
   PromiseReturningFunctionController
-} from './typescript/promises/04-promise-returning-function/promise-returning-function.controller';
+} from './typescript/promises/creation-and-basic-use/04-promise-returning-function/promise-returning-function.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],

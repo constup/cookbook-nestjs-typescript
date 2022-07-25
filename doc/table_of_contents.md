@@ -9,10 +9,11 @@
       - _Encapsulated class_
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
   - ***Promises***
-    - [Simple promise returning string](../src/typescript/promises/01-simple-promise-returning-string)
-    - [Promise returning object](../src/typescript/promises/02-promise-returning-simple-data-object)
-    - [Promise returning different types in resolve() and reject()](../src/typescript/promises/03-promise-returning-different-types)
-    - [Promise returning a function](../src/typescript/promises/04-promise-returning-function)
+    - ***Creation and basic use***
+      - [Simple promise returning string](../src/typescript/promises/creation-and-basic-use/01-simple-promise-returning-string)
+      - [Promise returning object](../src/typescript/promises/creation-and-basic-use/02-promise-returning-simple-data-object)
+      - [Promise returning different types in resolve() and reject()](../src/typescript/promises/creation-and-basic-use/03-promise-returning-different-types)
+      - [Promise returning a function](../src/typescript/promises/creation-and-basic-use/04-promise-returning-function)
 - **NodeJS**
 - **NestJS**
   - **Version 9**
