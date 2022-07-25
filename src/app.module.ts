@@ -33,6 +33,9 @@ import {
 import {
   PromiseReturningDifferentTypesController
 } from './typescript/promises/03-promise-returning-different-types/promise-returning-different-types.controller';
+import {
+  PromiseReturningFunctionController
+} from './typescript/promises/04-promise-returning-function/promise-returning-function.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -56,7 +59,8 @@ import {
     ImmutableObjectsController,
     SimplePromiseController,
     PromiseReturningObjectController,
-    PromiseReturningDifferentTypesController
+    PromiseReturningDifferentTypesController,
+    PromiseReturningFunctionController,
   ],
   providers: [
     AppService,

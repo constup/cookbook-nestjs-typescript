@@ -11,6 +11,8 @@
   - ***Promises***
     - [Simple promise returning string](../src/typescript/promises/01-simple-promise-returning-string)
     - [Promise returning object](../src/typescript/promises/02-promise-returning-object)
+    - [Promise returning different types in resolve() and reject()](../src/typescript/promises/03-promise-returning-different-types)
+    - [Promise returning a function](../src/typescript/promises/04-promise-returning-function)
 - **NodeJS**
 - **NestJS**
   - **Version 9**

@@ -18,7 +18,10 @@
  *            } catch (error) {
  *              console.log(error);
  *            }
- *  - What is the return type of a function returning a Promise?
+ *  - How to always have a return type of your Promises?
+ *    - Wrap it in a function and mark the function's return type. Any function with a defined return type will do, even
+ *      class methods.
+ *  - What should be the return type of a function returning a Promise?
  *    - Return type, in our case, is:
  *        Promise<string>
  *      Whatever the type your successPayload in `resolve(successPayload)` is, you should use it as the internal type of
