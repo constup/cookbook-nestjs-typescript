@@ -36,6 +36,9 @@ import {
 import {
   PromiseReturningFunctionController
 } from './typescript/promises/creation-and-basic-use/04-promise-returning-function/promise-returning-function.controller';
+import {
+  PromiseReturningOtherPromiseController
+} from './typescript/promises/creation-and-basic-use/05-promise-returning-other-promise/promise-returning-other-promise.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -61,6 +64,7 @@ import {
     PromiseReturningSimpleDataObjectController,
     PromiseReturningDifferentTypesController,
     PromiseReturningFunctionController,
+    PromiseReturningOtherPromiseController,
   ],
   providers: [
     AppService,
