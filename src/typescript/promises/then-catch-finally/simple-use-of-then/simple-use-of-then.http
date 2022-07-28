@@ -1,0 +1,12 @@
+GET localhost:3000/then-catch-finally/simple-then-example-with-wrapper?sampleNumber=1
+
+###
+GET localhost:3000/then-catch-finally/simple-then-example-with-wrapper?sampleNumber=2
+
+###
+GET localhost:3000/then-catch-finally/simple-then-example-without-wrapper?sampleNumber=1
+
+###
+GET localhost:3000/then-catch-finally/simple-then-example-without-wrapper?sampleNumber=2
+
+###

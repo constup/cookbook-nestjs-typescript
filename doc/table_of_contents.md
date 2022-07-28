@@ -14,6 +14,9 @@
       - [Promise returning object](../src/typescript/promises/creation-and-basic-use/02-promise-returning-simple-data-object)
       - [Promise returning different types in resolve() and reject()](../src/typescript/promises/creation-and-basic-use/03-promise-returning-different-types)
       - [Promise returning a function](../src/typescript/promises/creation-and-basic-use/04-promise-returning-function)
+      - [Promise returning other promise](../src/typescript/promises/creation-and-basic-use/05-promise-returning-other-promise)
+    - ***then(), catch() and finally()***
+      - [Simple use of then()](../src/typescript/promises/then-catch-finally/simple-use-of-then)
 - **NodeJS**
 - **NestJS**
   - **Version 9**

@@ -27,18 +27,11 @@ import { ReturnJsonPayloadController } from './nestjs/version-9/http/http-respon
 import { MakePostRequestController } from './nestjs/version-9/http/http-requests/outgoing/make-post-request/make-post-request/make-post-request.controller';
 import { ImmutableObjectsController } from './typescript/classes-and-objects/immutable-objects/immutable-objects.controller';
 import { SimplePromiseReturningStringController } from './typescript/promises/creation-and-basic-use/01-simple-promise-returning-string/simple-promise-returning-string.controller';
-import {
-  PromiseReturningSimpleDataObjectController
-} from './typescript/promises/creation-and-basic-use/02-promise-returning-simple-data-object/promise-returning-simple-data-object.controller';
-import {
-  PromiseReturningDifferentTypesController
-} from './typescript/promises/creation-and-basic-use/03-promise-returning-different-types/promise-returning-different-types.controller';
-import {
-  PromiseReturningFunctionController
-} from './typescript/promises/creation-and-basic-use/04-promise-returning-function/promise-returning-function.controller';
-import {
-  PromiseReturningOtherPromiseController
-} from './typescript/promises/creation-and-basic-use/05-promise-returning-other-promise/promise-returning-other-promise.controller';
+import { PromiseReturningSimpleDataObjectController } from './typescript/promises/creation-and-basic-use/02-promise-returning-simple-data-object/promise-returning-simple-data-object.controller';
+import { PromiseReturningDifferentTypesController } from './typescript/promises/creation-and-basic-use/03-promise-returning-different-types/promise-returning-different-types.controller';
+import { PromiseReturningFunctionController } from './typescript/promises/creation-and-basic-use/04-promise-returning-function/promise-returning-function.controller';
+import { PromiseReturningOtherPromiseController } from './typescript/promises/creation-and-basic-use/05-promise-returning-other-promise/promise-returning-other-promise.controller';
+import { SimpleUseOfThenController } from './typescript/promises/then-catch-finally/simple-use-of-then/simple-use-of-then.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -65,6 +58,7 @@ import {
     PromiseReturningDifferentTypesController,
     PromiseReturningFunctionController,
     PromiseReturningOtherPromiseController,
+    SimpleUseOfThenController,
   ],
   providers: [
     AppService,
