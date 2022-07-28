@@ -32,6 +32,9 @@ import { PromiseReturningDifferentTypesController } from './typescript/promises/
 import { PromiseReturningFunctionController } from './typescript/promises/creation-and-basic-use/04-promise-returning-function/promise-returning-function.controller';
 import { PromiseReturningOtherPromiseController } from './typescript/promises/creation-and-basic-use/05-promise-returning-other-promise/promise-returning-other-promise.controller';
 import { SimpleUseOfThenController } from './typescript/promises/then-catch-finally/simple-use-of-then/simple-use-of-then.controller';
+import {
+  AsyncAndPromiseUseController
+} from './typescript/async-await-vs-promises/async-and-promise-creation-and-use/async-and-promise-use.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -59,6 +62,7 @@ import { SimpleUseOfThenController } from './typescript/promises/then-catch-fina
     PromiseReturningFunctionController,
     PromiseReturningOtherPromiseController,
     SimpleUseOfThenController,
+    AsyncAndPromiseUseController,
   ],
   providers: [
     AppService,

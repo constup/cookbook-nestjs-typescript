@@ -1,0 +1,18 @@
+### 1
+GET localhost:3000/async-and-promise-creation-and-use/promise-example?sampleNumber=1
+### 2
+GET localhost:3000/async-and-promise-creation-and-use/promise-example?sampleNumber=2
+### 3
+GET localhost:3000/async-and-promise-creation-and-use/async-example?sampleNumber=1
+### 4
+GET localhost:3000/async-and-promise-creation-and-use/async-example?sampleNumber=2
+### 5
+GET localhost:3000/async-and-promise-creation-and-use/promise-mix-with-async?sampleNumber=1
+### 6
+GET localhost:3000/async-and-promise-creation-and-use/promise-mix-with-async?sampleNumber=2
+### 7
+GET localhost:3000/async-and-promise-creation-and-use/async-mix-with-promise?sampleNumber=1
+### 8
+GET localhost:3000/async-and-promise-creation-and-use/async-mix-with-promise?sampleNumber=2
+
+

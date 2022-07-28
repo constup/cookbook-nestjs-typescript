@@ -17,6 +17,8 @@
       - [Promise returning other promise](../src/typescript/promises/creation-and-basic-use/05-promise-returning-other-promise)
     - ***then(), catch() and finally()***
       - [Simple use of then()](../src/typescript/promises/then-catch-finally/simple-use-of-then)
+  - ***async/await vs new Promise()/Promise.then()***
+    - [Async and Promise creation and use](../src/typescript/async-await-vs-promises/async-and-promise-creation-and-use)
 - **NodeJS**
 - **NestJS**
   - **Version 9**
