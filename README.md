@@ -1,17 +1,17 @@
-# NodeJS TypeScript cookbook
+# NestJS TypeScript cookbook
 
 ## Short Description
 
-This is a collection of samples related to NodeJS and NestJS with TypeScript. This repository is built as a NestJS 
-project and can be installed and run like any other NestJS project.
+This is a collection of samples related to NestJS, a NodeJS framework with TypeScript. This repository is built as a 
+NestJS project and can be installed and run like any other NestJS project.
 
 Quickstart and reference: [Table of contents](./doc/table_of_contents.md)
 
 The following main technologies are covered:
 
+- NestJS (in TypeScript)
 - TypeScript
 - Vanilla NodeJS (in TypeScript)
-- NestJS (in TypeScript)
 
 See the Long description below for more details.
 
