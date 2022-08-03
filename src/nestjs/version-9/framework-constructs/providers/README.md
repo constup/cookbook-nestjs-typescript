@@ -5,7 +5,8 @@
 Providers are nothing more than plain OOP classes.
 
 The term "providers" in NestJS is introduced because Nest does not have full-featured dependency injection 
-implementation with autowiring (like Symfony, a PHP framework, has). To use dependency injection:
+implementation coupled with autowiring, autoconfiguration and autoloading (like Symfony, a PHP framework, has). To use 
+dependency injection:
  - `@Injector()`decorator needs to be added to a class manually;
  - a provider must also be manually registered in the `app.module.ts` file. You need to add it to 
    `@Module({[providers: []})`

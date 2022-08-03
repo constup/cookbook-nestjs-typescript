@@ -1,10 +1,10 @@
 {
   "name": "cookbook-nodejs",
   "version": "0.0.1",
-  "description": "",
+  "description": "NestJS Typescript cookbook",
   "author": "",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "GNU GPL v3.0",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

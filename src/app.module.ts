@@ -35,6 +35,7 @@ import { SimpleUseOfThenController } from './typescript/promises/then-catch-fina
 import {
   AsyncAndPromiseUseController
 } from './typescript/async-await-vs-promises/async-and-promise-creation-and-use/async-and-promise-use.controller';
+import {ClassPropertiesController} from './typescript/classes-and-objects/class-properties/class-properties.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -63,6 +64,7 @@ import {
     PromiseReturningOtherPromiseController,
     SimpleUseOfThenController,
     AsyncAndPromiseUseController,
+    ClassPropertiesController,
   ],
   providers: [
     AppService,
