@@ -6,8 +6,6 @@
  *  - Properties must either have a scope (private, protected, public) or be `readonly`.
  */
 export class ShorthandConstructor {
-  manualProperty = 'manual property';
-
   constructor(
     // x - reading outside the class
     // x - changing value outside the class
