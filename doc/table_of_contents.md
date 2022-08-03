@@ -5,8 +5,10 @@
 - **TypeScript**
   - ***Classes and Objects***
     - [Class samples (showcase only, used in other concrete examples)](../src/typescript/classes-and-objects/class-samples/)
-      - _Classic immutable object_
-      - _Encapsulated class_
+      - [_Classic immutable object_](../src/typescript/classes-and-objects/class-samples/classic-immutable-object.ts)
+      - [_Encapsulated class_](../src/typescript/classes-and-objects/class-samples/encapsulated-class.ts)
+    - [Class properties](../src/typescript/classes-and-objects/class-properties)
+      - [_Shorthand constructor_](../src/typescript/classes-and-objects/class-properties/shorthand-constructor.ts)
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
   - ***Promises***
     - ***Creation and basic use***
