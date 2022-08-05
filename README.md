@@ -1,5 +1,10 @@
 # NestJS TypeScript cookbook
 
+## NOTE
+
+> This repository is still in WIP state and is not ready to accept contributions at the moment.
+> Examples might significantly change, and directories might be shifted around while the project is in the WIP state. 
+
 ## Short Description
 
 This is a collection of examples related to NestJS, a NodeJS framework with TypeScript. This repository is built as a 
