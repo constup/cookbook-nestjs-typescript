@@ -1,4 +1,12 @@
-import { Body, Controller, HttpStatus, Post, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Post,
+  Res,
+  Headers,
+} from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 
 @Controller('sample-third-party-server')
@@ -24,8 +32,9 @@ export class SampleThirdPartyServerController {
       username: 'admin',
       password: 'admin',
     };
-    console.log('You have sent the following payload to the mock server: ');
+    console.log(`You have sent the following payload to the mock server's "authenticate" endpoint: `);
     console.log(JSON.stringify(postPayloadData, undefined, 4));
+    console.log('----------');
     const auth = postPayloadData.auth;
     if (
       typeof postPayloadData === 'undefined' ||
@@ -37,6 +46,8 @@ export class SampleThirdPartyServerController {
         message: 'Missing authentication header.',
       });
 
+      // If an error happens, we must `return` in order to stop further code execution. Sending the response with
+      // response.send() is not enough.
       return;
     }
     const username = auth.username;
@@ -51,6 +62,8 @@ export class SampleThirdPartyServerController {
         token: uuidv4(),
       });
 
+      // If an error happens, we must `return` in order to stop further code execution. Sending the response with
+      // response.send() is not enough.
       return;
     } else {
       response.status(HttpStatus.UNAUTHORIZED).send({
@@ -60,5 +73,51 @@ export class SampleThirdPartyServerController {
 
       return;
     }
+  }
+
+  /**
+   * This endpoint looks for the Authentication token in received request headers. It returns a sample data payload if
+   * the token is present, otherwise it return an error.
+   *
+   * @param headers
+   * @param response
+   */
+  @Get('post-auth-data-fetch')
+  postAuthDataFetch(@Headers() headers, @Res() response): void {
+    console.log('Mock server received the following headers in the "post-auth-data-fetch" endpoint:');
+    console.log(headers);
+    console.log('----------');
+    const token = headers.authorization;
+    // For this particular example, it doesn't matter whether the token is valid. It's enough that it's there.
+    if (!token) {
+      response.status(HttpStatus.UNAUTHORIZED).send({
+        status: 'ERROR',
+        message: 'Unauthorized.',
+      });
+
+      // If an error happens, we must `return` in order to stop further code execution. Sending the response with
+      // response.send() is not enough.
+      return;
+    }
+    console.log(
+      `Authentication token received by "post-auth-data-fetch" mock server endpoint: ${token}
+----------`,
+    );
+
+    // Send back some sample data payload.
+    response.status(HttpStatus.OK).send({
+      status: 'OK',
+      data: {
+        sample_string_field: 'sample string value',
+        sample_number_field: 9000,
+        sample_boolean_field: false,
+        sample_array_field: ['sample array value', 'another array value'],
+        sample_object_field: {
+          string_object_property: 'string object property value',
+        },
+      },
+    });
+
+    return;
   }
 }

@@ -35,7 +35,9 @@ import { SimpleUseOfThenController } from './typescript/promises/then-catch-fina
 import { AsyncAndPromiseUseController } from './typescript/async-await-vs-promises/async-and-promise-creation-and-use/async-and-promise-use.controller';
 import { ClassPropertiesController } from './typescript/classes-and-objects/class-properties/class-properties.controller';
 import { SampleThirdPartyServerController } from './mocks/sample-third-party-server/sample-third-party-server.controller';
-import {UuidController} from './nodejs-libraries/uuid-libraries/uuid.controller';
+import { UuidController } from './nodejs-libraries/uuid-libraries/uuid.controller';
+import { ClassicOopImplementationController } from './nodejs-libraries/axios/interceptors/classic-oop-implementation/classic-oop-implementation/classic-oop-implementation.controller';
+import { InterceptorImplementationController } from './nodejs-libraries/axios/interceptors/interceptor-implementation/interceptor-implementation/interceptor-implementation.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
@@ -67,6 +69,8 @@ import {UuidController} from './nodejs-libraries/uuid-libraries/uuid.controller'
     ClassPropertiesController,
     SampleThirdPartyServerController,
     UuidController,
+    ClassicOopImplementationController,
+    InterceptorImplementationController,
   ],
   providers: [
     AppService,

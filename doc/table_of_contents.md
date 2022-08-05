@@ -4,8 +4,8 @@
 
 Please follow this structure when adding to this _Table of contents_:
 
-- **Master category, language or framework**
-  - ***Topic or feature***
+- **Master category, language, framework or library** or [**Master category, language, framework or library**](table_of_contents.md)
+  - ***Topic or feature*** or [***Topic or feature***](table_of_contents.md)
     - [Main directory of examples](table_of_contents.md)
       - [_Helper files_](table_of_contents.md)
       - _Topics covered by examples_
@@ -34,6 +34,8 @@ Please follow this structure when adding to this _Table of contents_:
 - **NodeJS**
 - **NodeJS libraries**
   - [UUID libraries](../src/nodejs-libraries/uuid-libraries)
+  - **Axios**
+    - [***Interceptors***](../src/nodejs-libraries/axios/interceptors/README.md)
 - **NestJS**
   - **Version 9**
     - ***Controllers and commands***
@@ -68,6 +70,6 @@ Please follow this structure when adding to this _Table of contents_:
   - [Sample third party server mock](../src/mocks/sample-third-party-server)
     - _Username and password to authentication token mock_
 
-## Links
+---
 
-• [Home](../README.md) |
+• [Home](../README.md)
