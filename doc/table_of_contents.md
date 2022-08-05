@@ -1,5 +1,15 @@
 # Table of contents
 
+## Legend
+
+Please follow this structure when adding to this _Table of contents_:
+
+- **Master category, language or framework**
+  - ***Topic or feature***
+    - [Main directory of examples](table_of_contents.md)
+      - [_Helper files_](table_of_contents.md)
+      - _Topics covered by examples_
+
 ## Table of contents
 
 - **TypeScript**
@@ -22,6 +32,8 @@
   - ***async/await vs new Promise()/Promise.then()***
     - [Async and Promise creation and use](../src/typescript/async-await-vs-promises/async-and-promise-creation-and-use)
 - **NodeJS**
+- **NodeJS libraries**
+  - [UUID libraries](../src/nodejs-libraries/uuid-libraries)
 - **NestJS**
   - **Version 9**
     - ***Controllers and commands***
@@ -52,6 +64,9 @@
           - [Make simple POST request](../src/nestjs/version-9/http/http-requests/outgoing/make-post-request)
       - ***HTTP Responses***
         - [Simple JSON response](../src/nestjs/version-9/http/http-responses/simple-json-response)
+- **Mocks**
+  - [Sample third party server mock](../src/mocks/sample-third-party-server)
+    - _Username and password to authentication token mock_
 
 ## Links
 

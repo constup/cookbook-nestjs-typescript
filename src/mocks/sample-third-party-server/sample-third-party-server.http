@@ -1,0 +1,12 @@
+POST localhost:3000/sample-third-party-server/authenticate
+Content-Type: application/json
+Accept: application/json
+
+{
+  "auth": {
+    "username": "admin",
+    "password": "admin"
+  }
+}
+
+###

@@ -2,7 +2,7 @@
 
 ## Short Description
 
-This is a collection of samples related to NestJS, a NodeJS framework with TypeScript. This repository is built as a 
+This is a collection of examples related to NestJS, a NodeJS framework with TypeScript. This repository is built as a 
 NestJS project and can be installed and run like any other NestJS project.
 
 Quickstart and reference: [Table of contents](./doc/table_of_contents.md)
@@ -14,6 +14,16 @@ The following main technologies are covered:
 - Vanilla NodeJS (in TypeScript)
 
 See the Long description below for more details.
+
+## Top-level Table of contents
+
+All top-level categories are in `/src` directory.
+
+- **NestJS**: Examples related to NestJS framework;
+- **NodeJS**: Examples related to NodeJS;
+- **Typescript**: Examples related to typescript;
+- **NodeJS libraries**: Examples related to some common NodeJS libraries (npm packages);
+- **Mocks**: Mocks of web servers and services;
 
 ## Installation
 
