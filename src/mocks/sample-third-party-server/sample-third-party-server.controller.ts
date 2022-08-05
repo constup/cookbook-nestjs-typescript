@@ -32,11 +32,10 @@ export class SampleThirdPartyServerController {
       !postPayloadData.hasOwnProperty('auth') ||
       typeof postPayloadData.auth === 'undefined'
     ) {
-      const result = {
+      response.status(HttpStatus.BAD_REQUEST).send({
         status: 'ERROR',
         message: 'Missing authentication header.',
-      };
-      response.status(HttpStatus.BAD_REQUEST).send(result);
+      });
 
       return;
     }
@@ -47,20 +46,19 @@ export class SampleThirdPartyServerController {
       username === validUsernamePassword.username &&
       password === validUsernamePassword.password
     ) {
-      const uuidString = uuidv4();
-      const result = {
+      response.status(HttpStatus.OK).send({
         status: 'OK',
-        token: uuidString,
-      };
+        token: uuidv4(),
+      });
 
-      response.status(HttpStatus.OK).send(result);
+      return;
     } else {
-      const result = {
+      response.status(HttpStatus.UNAUTHORIZED).send({
         status: 'ERROR',
         message: 'Wrong username and password',
-      };
+      });
 
-      response.status(HttpStatus.UNAUTHORIZED).send(result);
+      return;
     }
   }
 }
