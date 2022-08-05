@@ -48,7 +48,7 @@ export class TokenService implements TokenServiceInterface {
 
     /**
      * When an Interceptor is attached, it will stay attached to that Axios instance.
-     * In our case, we are making 2 API calls in the same controller action:
+     * In our case, we are making 2 API calls in the same controller action by using the same Axios instance:
      *    - the first: sending API credentials and obtaining an Authentication token;
      *    - the second: making an API call to fetch some data while using the authentication token fetched in the
      *      previous step;
