@@ -18,7 +18,7 @@ Please follow this structure when adding to this _Table of contents_:
       - [_Classic immutable object_](../src/typescript/classes-and-objects/class-samples/classic-immutable-object.ts)
       - [_Encapsulated class_](../src/typescript/classes-and-objects/class-samples/encapsulated-class.ts)
     - [Class properties](../src/typescript/classes-and-objects/class-properties)
-      - [_Shorthand constructor_](../src/typescript/classes-and-objects/class-properties/shorthand-constructor.ts)
+      - [_Shorthand constructor_](../src/typescript/classes-and-objects/class-properties/shorthand-constructor/shorthand-constructor.ts)
     - [Immutable objects](../src/typescript/classes-and-objects/immutable-objects)
   - ***Promises***
     - ***Creation and basic use***

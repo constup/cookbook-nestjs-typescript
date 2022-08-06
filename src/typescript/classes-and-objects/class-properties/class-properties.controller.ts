@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { ShorthandConstructor } from './shorthand-constructor';
+import { ShorthandConstructor } from './shorthand-constructor/shorthand-constructor';
 
 @Controller('class-properties')
 export class ClassPropertiesController {
