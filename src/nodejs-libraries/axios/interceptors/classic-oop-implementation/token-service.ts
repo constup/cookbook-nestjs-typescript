@@ -8,32 +8,32 @@ import { ResponseProcessor } from '../common-services/response-processor/respons
 import { RequestTokenApi } from '../common-services/request-token-api/request-token-api';
 
 export class TokenService implements TokenServiceInterface {
-  private readonly _axiosInstance: AxiosInstance;
+    private readonly _axiosInstance: AxiosInstance;
 
-  constructor(axiosInstance: AxiosInstance) {
-    this._axiosInstance = axiosInstance;
-  }
-
-  get axiosInstance(): AxiosInstance {
-    return this._axiosInstance;
-  }
-
-  async fetchAuthToken(): Promise<string> {
-    const requestTokenApi = new RequestTokenApi(this.axiosInstance);
-    const credentials = new CredentialsService().fetchCredentialsFromEnv();
-
-    let authResponse: AuthResponse;
-    try {
-      authResponse = await requestTokenApi.requestAuthenticationToken(
-        credentials,
-      );
-    } catch (error) {
-      new ErrorProcessingService().processError(error);
-      throw 'Authentication failure.';
+    constructor(axiosInstance: AxiosInstance) {
+        this._axiosInstance = axiosInstance;
     }
-    const authResponseValidator = new AuthResponseValidator();
-    const responseProcessor = new ResponseProcessor(authResponseValidator);
 
-    return responseProcessor.fetchToken(authResponse);
-  }
+    get axiosInstance(): AxiosInstance {
+        return this._axiosInstance;
+    }
+
+    async fetchAuthToken(): Promise<string> {
+        const requestTokenApi = new RequestTokenApi(this.axiosInstance);
+        const credentials = new CredentialsService().fetchCredentialsFromEnv();
+
+        let authResponse: AuthResponse;
+        try {
+            authResponse = await requestTokenApi.requestAuthenticationToken(
+                credentials,
+            );
+        } catch (error) {
+            new ErrorProcessingService().processError(error);
+            throw 'Authentication failure.';
+        }
+        const authResponseValidator = new AuthResponseValidator();
+        const responseProcessor = new ResponseProcessor(authResponseValidator);
+
+        return responseProcessor.fetchToken(authResponse);
+    }
 }

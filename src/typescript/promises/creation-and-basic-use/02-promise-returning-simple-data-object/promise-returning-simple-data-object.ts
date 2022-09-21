@@ -5,22 +5,22 @@
  * @see promiseReturningObject
  */
 export const promiseReturningObjectFunction = (
-  sampleNumber: number,
+    sampleNumber: number,
 ): Promise<object> => {
-  return new Promise((resolve, reject) => {
-    const successObject = {
-      successString: 'Success!',
-      successNumber: 42,
-    };
-    const errorObject = {
-      errorString: 'Error!',
-      errorNumber: -1,
-    };
+    return new Promise((resolve, reject) => {
+        const successObject = {
+            successString: 'Success!',
+            successNumber: 42,
+        };
+        const errorObject = {
+            errorString: 'Error!',
+            errorNumber: -1,
+        };
 
-    if (sampleNumber === 1) {
-      resolve(successObject);
-    } else {
-      reject(errorObject);
-    }
-  });
+        if (sampleNumber === 1) {
+            resolve(successObject);
+        } else {
+            reject(errorObject);
+        }
+    });
 };

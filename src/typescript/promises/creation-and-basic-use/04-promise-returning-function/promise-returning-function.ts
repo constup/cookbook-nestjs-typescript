@@ -19,17 +19,17 @@
 export const promiseWrapperFunction = (): Promise<
   (stringParameter: string, numberParameter: number) => string
 > => {
-  return new Promise((resolve) => {
-    const sampleReturnFunction = (
-      stringParam: string,
-      numberParam: number,
-    ): string => {
-      return `This function is returned by a Promise.
+    return new Promise((resolve) => {
+        const sampleReturnFunction = (
+            stringParam: string,
+            numberParam: number,
+        ): string => {
+            return `This function is returned by a Promise.
         string param is: ${stringParam}
         numberParam is: ${numberParam}
         `;
-    };
+        };
 
-    resolve(sampleReturnFunction);
-  });
+        resolve(sampleReturnFunction);
+    });
 };

@@ -11,15 +11,15 @@ export class MixPostGetPayloadsController {
    * @param postPayload
    */
   @Post()
-  getBothPostAndGet(@Query() query, @Body() postPayload): string {
-    let text: string;
+    getBothPostAndGet(@Query() query, @Body() postPayload): string {
+        let text: string;
 
-    // URL parameters are fetched from query function property by using the @Query decorator.
-    text = `URL parameters: <pre>${JSON.stringify(query)}</pre><br>`;
+        // URL parameters are fetched from query function property by using the @Query decorator.
+        text = `URL parameters: <pre>${JSON.stringify(query)}</pre><br>`;
 
-    // POST payload is fetched from postPayload function property by using the @Body decorator.
-    text += `POST payload data: <pre>${JSON.stringify(postPayload)}</pre>`;
+        // POST payload is fetched from postPayload function property by using the @Body decorator.
+        text += `POST payload data: <pre>${JSON.stringify(postPayload)}</pre>`;
 
-    return text;
-  }
+        return text;
+    }
 }

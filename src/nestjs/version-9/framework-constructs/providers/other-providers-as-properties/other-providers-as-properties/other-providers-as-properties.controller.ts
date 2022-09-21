@@ -3,22 +3,22 @@ import { ProviderWithProviderProperties } from '../provider-with-provider-proper
 
 @Controller('other-providers-as-properties')
 export class OtherProvidersAsPropertiesController {
-  constructor(
+    constructor(
     private constructorInjectionPropertyExample: ProviderWithProviderProperties,
-  ) {}
+    ) {}
 
   @Inject(ProviderWithProviderProperties)
-  private propertyInjectionPropertyExample: ProviderWithProviderProperties;
+    private propertyInjectionPropertyExample: ProviderWithProviderProperties;
 
   /**
    * This example uses constructor injection to let the Service Container resolve the dependency;
    */
   @Get('controller-injection')
   constructorInjectionExample(): string {
-    return (
-      'Injected through a constructor.<br>' +
+      return (
+          'Injected through a constructor.<br>' +
       this.constructorInjectionPropertyExample.doSomething()
-    );
+      );
   }
 
   /**
@@ -31,9 +31,9 @@ export class OtherProvidersAsPropertiesController {
    */
   @Get('property-injection')
   propertyInjectionExample(): string {
-    return (
-      'Injected through a property.<br>' +
+      return (
+          'Injected through a property.<br>' +
       this.propertyInjectionPropertyExample.doSomething()
-    );
+      );
   }
 }

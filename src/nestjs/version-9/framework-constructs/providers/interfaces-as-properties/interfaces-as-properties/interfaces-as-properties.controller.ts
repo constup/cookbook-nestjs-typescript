@@ -4,18 +4,18 @@ import { ConcreteClass01 } from '../concrete-class01';
 
 @Controller('interfaces-as-properties')
 export class InterfacesAsPropertiesController {
-  constructor(private interfacesAsProperties: InterfacesAsProperties) {}
+    constructor(private interfacesAsProperties: InterfacesAsProperties) {}
 
   /**
    * Default "happy flow" example. An object is created and assigned to the property before being used.
    */
   @Get()
-  doSomething(): string {
-    this.interfacesAsProperties.sampleInterface = new ConcreteClass01();
-    this.interfacesAsProperties.sampleInterface.someProperty = 'test';
+    doSomething(): string {
+        this.interfacesAsProperties.sampleInterface = new ConcreteClass01();
+        this.interfacesAsProperties.sampleInterface.someProperty = 'test';
 
-    return this.interfacesAsProperties.sampleInterface.doSomething();
-  }
+        return this.interfacesAsProperties.sampleInterface.doSomething();
+    }
 
   /**
    * If only one class implements the interface, the code will work. DI will resolve the interface and use the only
@@ -28,7 +28,7 @@ export class InterfacesAsPropertiesController {
    */
   @Get('no-object-creation')
   noObjectCreation(): string {
-    return this.interfacesAsProperties.sampleInterface.doSomething();
+      return this.interfacesAsProperties.sampleInterface.doSomething();
   }
 
   /**
@@ -44,10 +44,10 @@ export class InterfacesAsPropertiesController {
    */
   @Get('no-object-creation-no-touch')
   noObjectCreationNoTouch(): string {
-    return (
-      'This controller uses a provider which has an interface as a property. Even though the interface was <br>' +
+      return (
+          'This controller uses a provider which has an interface as a property. Even though the interface was <br>' +
       "never implemented (a concrete class has never been assigned to the property), as long as the provider isn't <br>" +
       'touched, the code will work (this message will be shown).'
-    );
+      );
   }
 }

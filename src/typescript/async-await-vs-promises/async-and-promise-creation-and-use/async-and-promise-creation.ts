@@ -15,15 +15,15 @@
  * @return Promise<string>
  */
 export const promiseCreationExample = (
-  sampleNumber: number,
+    sampleNumber: number,
 ): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    if (sampleNumber === 1) {
-      resolve('success from promise');
-    } else {
-      reject('error from promise');
-    }
-  });
+    return new Promise((resolve, reject) => {
+        if (sampleNumber === 1) {
+            resolve('success from promise');
+        } else {
+            reject('error from promise');
+        }
+    });
 };
 
 /**
@@ -40,13 +40,13 @@ export const promiseCreationExample = (
  * @return Promise<string>
  */
 export const asyncCreationExample = async (
-  sampleNumber: number,
+    sampleNumber: number,
 ): Promise<string> => {
-  if (sampleNumber === 1) {
-    return 'success from async';
-  } else {
-    throw 'error from async';
-  }
+    if (sampleNumber === 1) {
+        return 'success from async';
+    } else {
+        throw 'error from async';
+    }
 };
 
 /**
@@ -54,21 +54,21 @@ export const asyncCreationExample = async (
  * function implementations as methods.
  */
 export class CreationExampleClass {
-  createPromise(sampleNumber: number) {
-    return new Promise((resolve, reject) => {
-      if (sampleNumber === 1) {
-        resolve('success from promise');
-      } else {
-        reject('error from promise');
-      }
-    });
-  }
-
-  async createAsync(sampleNumber: number) {
-    if (sampleNumber === 1) {
-      return 'success from async';
-    } else {
-      throw Error('error from async');
+    createPromise(sampleNumber: number) {
+        return new Promise((resolve, reject) => {
+            if (sampleNumber === 1) {
+                resolve('success from promise');
+            } else {
+                reject('error from promise');
+            }
+        });
     }
-  }
+
+    async createAsync(sampleNumber: number) {
+        if (sampleNumber === 1) {
+            return 'success from async';
+        } else {
+            throw Error('error from async');
+        }
+    }
 }

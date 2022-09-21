@@ -69,7 +69,7 @@ Please follow this structure when adding to this _Table of contents_:
 - **Mocks**
   - [Sample third party server mock](../src/mocks/sample-third-party-server)
     - _Username and password to authentication token mock_
-    - _Endpoint mock which checks whether auth token is received, then sends aa sample JSON payload as a response_
+    - _Endpoint mock which checks whether auth token is received, then sends a sample JSON payload as a response_
 
 ---
 

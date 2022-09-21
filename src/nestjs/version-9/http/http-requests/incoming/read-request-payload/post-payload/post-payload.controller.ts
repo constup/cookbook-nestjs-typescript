@@ -10,9 +10,9 @@ export class PostPayloadController {
    * @param postPayloadData
    */
   @Post()
-  getPostPayload(@Body() postPayloadData: PostPayloadData): string {
-    return `POST payload data (stored in PostPayloadData DTO): <pre>${JSON.stringify(
-      postPayloadData,
-    )}</pre>`;
-  }
+    getPostPayload(@Body() postPayloadData: PostPayloadData): string {
+        return `POST payload data (stored in PostPayloadData DTO): <pre>${JSON.stringify(
+            postPayloadData,
+        )}</pre>`;
+    }
 }

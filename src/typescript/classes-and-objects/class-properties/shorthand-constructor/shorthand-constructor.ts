@@ -6,7 +6,7 @@
  *  - Properties must either have a scope (private, protected, public) or be `readonly`.
  */
 export class ShorthandConstructor {
-  constructor(
+    constructor(
     // x - reading outside the class
     // x - changing value outside the class
     // ✓ - reading inside the class
@@ -39,5 +39,5 @@ export class ShorthandConstructor {
     // write to it inside or outside the class, it will not be included in JSON.stringify() when processing this object,
     // but you still need to set it when you want to instantiate an object (in: `new ShorthandConstructor(...)`).
     defaultProperty: string,
-  ) {}
+    ) {}
 }

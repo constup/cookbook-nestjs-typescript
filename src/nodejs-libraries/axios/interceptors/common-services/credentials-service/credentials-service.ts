@@ -3,19 +3,19 @@ import { CredentialsServiceInterface } from './credentials-service.interface';
 import { AuthRequestPayload } from '../type/authentication/auth-request-payload';
 
 export class CredentialsService implements CredentialsServiceInterface {
-  fetchCredentialsFromEnv(): AuthRequestPayload {
-    const username: string = process.env.MOCK_AUTH_API_USERNAME;
-    const password: string = process.env.MOCK_AUTH_API_PASSWORD;
+    fetchCredentialsFromEnv(): AuthRequestPayload {
+        const username: string = process.env.MOCK_AUTH_API_USERNAME;
+        const password: string = process.env.MOCK_AUTH_API_PASSWORD;
 
-    if (typeof username === 'undefined' || typeof password === 'undefined') {
-      throw new Error('Credentials are missing or could not be read.');
+        if (typeof username === 'undefined' || typeof password === 'undefined') {
+            throw new Error('Credentials are missing or could not be read.');
+        }
+
+        return {
+            auth: {
+                username: username,
+                password: password,
+            },
+        };
     }
-
-    return {
-      auth: {
-        username: username,
-        password: password,
-      },
-    };
-  }
 }

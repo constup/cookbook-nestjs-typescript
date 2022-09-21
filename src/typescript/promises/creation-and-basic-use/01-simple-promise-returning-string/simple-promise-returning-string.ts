@@ -35,16 +35,16 @@
  * @see simplePromiseExample
  */
 export const somePromiseFunction = (sampleNumber: number): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    if (sampleNumber === 1) {
-      // If you call somePromiseFunction(1), the Promise will resolve and return 'Correct number'.
-      resolve('Correct number');
-    } else if (sampleNumber === 2) {
-      // If you call somePromiseFunction(2) the promise will reject and throw an Error with text 'Wrong number'.
-      // You can then catch the error in a try/catch block.
-      reject('Wrong number');
-    } else {
-      /**
+    return new Promise((resolve, reject) => {
+        if (sampleNumber === 1) {
+            // If you call somePromiseFunction(1), the Promise will resolve and return 'Correct number'.
+            resolve('Correct number');
+        } else if (sampleNumber === 2) {
+            // If you call somePromiseFunction(2) the promise will reject and throw an Error with text 'Wrong number'.
+            // You can then catch the error in a try/catch block.
+            reject('Wrong number');
+        } else {
+            /**
        * Don't do this!!!
        * A Promise can have 3 states: resolved (sometimes referred as "fulfilled"), rejected and pending. By default, a
        * Promise is considered to be in a "pending" state until resolve() or reject() is called inside it.
@@ -55,9 +55,9 @@ export const somePromiseFunction = (sampleNumber: number): Promise<string> => {
        * your application will get stuck on that line, waiting for a Promise to either be resolved or rejected, which
        * will never happen.
        */
-      return 'You are now officially stuck.';
-    }
-  });
+            return 'You are now officially stuck.';
+        }
+    });
 };
 
 /**
@@ -68,16 +68,16 @@ export const somePromiseFunction = (sampleNumber: number): Promise<string> => {
  * @see simplePromiseExternalVariables
  */
 export class PromiseSampleClass {
-  returnPromise(): Promise<string> {
-    const sampleNumber = 1;
-    const sampleText = "See? It's returned by the promise.";
+    returnPromise(): Promise<string> {
+        const sampleNumber = 1;
+        const sampleText = "See? It's returned by the promise.";
 
-    return new Promise((resolve, reject) => {
-      if (sampleNumber === 1) {
-        resolve(`It's still a correct number and... ${sampleText}`);
-      } else {
-        reject('Wrong number');
-      }
-    });
-  }
+        return new Promise((resolve, reject) => {
+            if (sampleNumber === 1) {
+                resolve(`It's still a correct number and... ${sampleText}`);
+            } else {
+                reject('Wrong number');
+            }
+        });
+    }
 }

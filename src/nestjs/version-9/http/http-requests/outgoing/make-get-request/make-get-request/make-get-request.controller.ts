@@ -4,11 +4,11 @@ import { map, Observable } from 'rxjs';
 import { AxiosResponse } from 'axios';
 
 @Module({
-  imports: [HttpModule],
+    imports: [HttpModule],
 })
 @Controller('make-get-request')
 export class MakeGetRequestController {
-  constructor(private readonly httpService: HttpService) {}
+    constructor(private readonly httpService: HttpService) {}
 
   /**
    * This example sends a GET request to an endpoint and returns data fetched from that endpoint.
@@ -22,9 +22,9 @@ export class MakeGetRequestController {
    *      - pipe(): https://rxjs.dev/guide/overview
    */
   @Get('make-simple-get-request')
-  makeSimpleGetRequest(): Observable<AxiosResponse<any[]>> {
-    return this.httpService
-      .get('http://localhost:3000/fetch-request-headers/all-headers')
-      .pipe(map((x) => x?.data));
-  }
+    makeSimpleGetRequest(): Observable<AxiosResponse<any[]>> {
+        return this.httpService
+            .get('http://localhost:3000/fetch-request-headers/all-headers')
+            .pipe(map((x) => x?.data));
+    }
 }

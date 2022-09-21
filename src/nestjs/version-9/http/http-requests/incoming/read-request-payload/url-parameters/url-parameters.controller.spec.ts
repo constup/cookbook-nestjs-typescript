@@ -2,17 +2,17 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { UrlParametersController } from './url-parameters.controller';
 
 describe('UrlParametersController', () => {
-  let controller: UrlParametersController;
+    let controller: UrlParametersController;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      controllers: [UrlParametersController],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            controllers: [UrlParametersController],
+        }).compile();
 
-    controller = module.get<UrlParametersController>(UrlParametersController);
-  });
+        controller = module.get<UrlParametersController>(UrlParametersController);
+    });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+    it('should be defined', () => {
+        expect(controller).toBeDefined();
+    });
 });

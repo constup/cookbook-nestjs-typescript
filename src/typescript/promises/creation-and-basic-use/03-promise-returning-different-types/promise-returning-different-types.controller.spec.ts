@@ -2,17 +2,17 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { PromiseReturningDifferentTypesController } from './promise-returning-different-types.controller';
 
 describe('PromiseReturningDifferentTypesController', () => {
-  let controller: PromiseReturningDifferentTypesController;
+    let controller: PromiseReturningDifferentTypesController;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      controllers: [PromiseReturningDifferentTypesController],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            controllers: [PromiseReturningDifferentTypesController],
+        }).compile();
 
-    controller = module.get<PromiseReturningDifferentTypesController>(PromiseReturningDifferentTypesController);
-  });
+        controller = module.get<PromiseReturningDifferentTypesController>(PromiseReturningDifferentTypesController);
+    });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+    it('should be defined', () => {
+        expect(controller).toBeDefined();
+    });
 });

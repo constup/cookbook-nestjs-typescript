@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class ProviderAsProperty {
-  stringProperty = 'test';
+    stringProperty = 'test';
 
-  doSomething(): string {
-    return this.stringProperty;
-  }
+    doSomething(): string {
+        return this.stringProperty;
+    }
 }

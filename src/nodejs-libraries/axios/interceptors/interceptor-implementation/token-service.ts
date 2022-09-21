@@ -5,48 +5,48 @@ import { ErrorProcessingService } from '../common-services/error-processing-serv
 import { TokenServiceInterface } from './token-service.interface';
 
 export class TokenService implements TokenServiceInterface {
-  private readonly _axiosInstance: AxiosInstance;
-  readonly endpoint = '/sample-third-party-server/authenticate';
+    private readonly _axiosInstance: AxiosInstance;
+    readonly endpoint = '/sample-third-party-server/authenticate';
 
-  constructor(axiosInstance: AxiosInstance) {
-    this._axiosInstance = axiosInstance;
-  }
+    constructor(axiosInstance: AxiosInstance) {
+        this._axiosInstance = axiosInstance;
+    }
 
-  get axiosInstance(): AxiosInstance {
-    return this._axiosInstance;
-  }
+    get axiosInstance(): AxiosInstance {
+        return this._axiosInstance;
+    }
 
-  async fetchAuthToken(): Promise<string> {
-    const authTokenRequestInterceptor =
+    async fetchAuthToken(): Promise<string> {
+        const authTokenRequestInterceptor =
       this.axiosInstance.interceptors.request.use(
-        (axiosRequestConfig: AxiosRequestConfig) => {
-          axiosRequestConfig.data =
+          (axiosRequestConfig: AxiosRequestConfig) => {
+              axiosRequestConfig.data =
             new CredentialsService().fetchCredentialsFromEnv();
 
-          return axiosRequestConfig;
-        },
-        (error) => {
-          return Promise.reject(error);
-        },
+              return axiosRequestConfig;
+          },
+          (error) => {
+              return Promise.reject(error);
+          },
       );
-    const authTokenResponseInterceptor =
+        const authTokenResponseInterceptor =
       this._axiosInstance.interceptors.response.use(
-        (response: AxiosResponse) => {
-          new AuthResponseValidator().validateAuthResponse(response.data);
+          (response: AxiosResponse) => {
+              new AuthResponseValidator().validateAuthResponse(response.data);
 
-          return response;
-        },
-        (error) => {
-          new ErrorProcessingService().processError(error);
-          throw 'Authentication failure.';
-        },
+              return response;
+          },
+          (error) => {
+              new ErrorProcessingService().processError(error);
+              throw 'Authentication failure.';
+          },
       );
 
-    const requestResult = await this.axiosInstance.post(
-      this.axiosInstance.getUri() + this.endpoint,
-    );
+        const requestResult = await this.axiosInstance.post(
+            this.axiosInstance.getUri() + this.endpoint,
+        );
 
-    /**
+        /**
      * When an Interceptor is attached, it will stay attached to that Axios instance.
      * In our case, we are making 2 API calls in the same controller action by using the same Axios instance:
      *    - the first: sending API credentials and obtaining an Authentication token;
@@ -65,11 +65,11 @@ export class TokenService implements TokenServiceInterface {
      * If you want to check what will happen when interceptors are left attached, you can comment out the following two
      * "eject" calls, run the call and monitor the console.
      */
-    this.axiosInstance.interceptors.request.eject(authTokenRequestInterceptor);
-    this.axiosInstance.interceptors.response.eject(
-      authTokenResponseInterceptor,
-    );
+        this.axiosInstance.interceptors.request.eject(authTokenRequestInterceptor);
+        this.axiosInstance.interceptors.response.eject(
+            authTokenResponseInterceptor,
+        );
 
-    return requestResult.data.token;
-  }
+        return requestResult.data.token;
+    }
 }

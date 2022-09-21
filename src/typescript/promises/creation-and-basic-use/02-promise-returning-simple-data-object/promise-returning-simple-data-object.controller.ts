@@ -10,24 +10,24 @@ export class PromiseReturningSimpleDataObjectController {
    * @see promiseReturningObjectFunction
    */
   @Get('simple-resolve-reject')
-  async promiseReturningObject(): Promise<string> {
-    let promiseReturningObject = await promiseReturningObjectFunction(1);
-    let text = `Passing value 1.
+    async promiseReturningObject(): Promise<string> {
+        let promiseReturningObject = await promiseReturningObjectFunction(1);
+        let text = `Passing value 1.
     The promise will be resolved.
     The result is:
     ${JSON.stringify(promiseReturningObject)}
     \r\n`;
 
-    try {
-      promiseReturningObject = await promiseReturningObjectFunction(2);
-    } catch (error) {
-      text += `Passing value 2.
+        try {
+            promiseReturningObject = await promiseReturningObjectFunction(2);
+        } catch (error) {
+            text += `Passing value 2.
       The promise will be rejected.
       The error payload is:
       ${JSON.stringify(error)}
       `;
-    }
+        }
 
-    return text;
-  }
+        return text;
+    }
 }

@@ -7,19 +7,19 @@
  *  TS2345 Argument of type 'string' is not assignable to parameter of type 'object|PromiseLike<>'.
  */
 export const promiseReturningDifferentTypesFunction = (
-  sampleNumber: number,
+    sampleNumber: number,
 ): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const successString = 'Success!';
-    const errorObject = {
-      errorString: 'Error!',
-      errorNumber: -2,
-    };
+    return new Promise((resolve, reject) => {
+        const successString = 'Success!';
+        const errorObject = {
+            errorString: 'Error!',
+            errorNumber: -2,
+        };
 
-    if (sampleNumber === 1) {
-      resolve(successString);
-    } else {
-      reject(errorObject);
-    }
-  });
+        if (sampleNumber === 1) {
+            resolve(successString);
+        } else {
+            reject(errorObject);
+        }
+    });
 };

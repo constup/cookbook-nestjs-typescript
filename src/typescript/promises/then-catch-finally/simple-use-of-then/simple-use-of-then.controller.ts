@@ -3,7 +3,7 @@ import { samplePromise } from './sample-promise';
 
 @Controller('then-catch-finally')
 export class SimpleUseOfThenController {
-  /**
+    /**
    * In this wrapper function we are going to use the sample Promise (returned by the samplePromise() function), apply
    * some additional processing to the Promise's result and pass the result to a controller. The result of this wrapper
    * function is also a Promise with its resolve and reject payloads processed and modified.
@@ -40,22 +40,22 @@ export class SimpleUseOfThenController {
    * @private
    * @return Promise<string>
    */
-  private wrapperFunction(sampleNumber: number): Promise<string> {
-    return samplePromise(sampleNumber).then(
-      (promiseResult: string) => {
-        // Processing of Promise's result can go here.
-        const result = `\tThis is executed in the wrapper function. Promise result:\r\n ${promiseResult}`;
-        /**
+    private wrapperFunction(sampleNumber: number): Promise<string> {
+        return samplePromise(sampleNumber).then(
+            (promiseResult: string) => {
+                // Processing of Promise's result can go here.
+                const result = `\tThis is executed in the wrapper function. Promise result:\r\n ${promiseResult}`;
+                /**
          * Using:
          *  return result;
          * should have the same effect, but can be bugged. See the comment section of this wrapper function for more
          * details.
          */
-        return Promise.resolve(result);
-      },
-      (promiseError) => {
-        // Processing of Promise's error can go here
-        /**
+                return Promise.resolve(result);
+            },
+            (promiseError) => {
+                // Processing of Promise's error can go here
+                /**
          * You can also use:
          *  throw `\tThis is executed in the wrapper function. Promise error:\r\n ${promiseError}`;
          * or:
@@ -63,12 +63,12 @@ export class SimpleUseOfThenController {
          * and the result should be exactly the same - a new Promise will be returned which uses the error message from
          * "throw" or Error() as the rejection payload.
          */
-        return Promise.reject(
-          `\tThis is executed in the wrapper function. Promise error:\r\n ${promiseError}`,
+                return Promise.reject(
+                    `\tThis is executed in the wrapper function. Promise error:\r\n ${promiseError}`,
+                );
+            },
         );
-      },
-    );
-  }
+    }
 
   /**
    * This example uses a wrapper function for the promise which we want to use.
@@ -84,18 +84,18 @@ export class SimpleUseOfThenController {
    * @param query
    */
   @Get('simple-then-example-with-wrapper')
-  simpleThenExampleWithWrapper(@Query() query) {
-    return this.wrapperFunction(parseInt(query.sampleNumber)).then(
-      (resolveResult: string) => {
-        return `This is executed in controller action. Resolve result:\r\n ${resolveResult}`;
-      },
-      (rejectResult) => {
-        console.log(
-          `This is executed in controller action. Reject result:\r\n ${rejectResult}`,
+    simpleThenExampleWithWrapper(@Query() query) {
+        return this.wrapperFunction(parseInt(query.sampleNumber)).then(
+            (resolveResult: string) => {
+                return `This is executed in controller action. Resolve result:\r\n ${resolveResult}`;
+            },
+            (rejectResult) => {
+                console.log(
+                    `This is executed in controller action. Reject result:\r\n ${rejectResult}`,
+                );
+            },
         );
-      },
-    );
-  }
+    }
 
   /**
    * The promise is called in this controller action directly. Any additional processing is applied directly in the
@@ -106,17 +106,17 @@ export class SimpleUseOfThenController {
    */
   @Get('simple-then-example-without-wrapper')
   simpleThenExampleWithoutWrapper(@Query() query) {
-    return samplePromise(parseInt(query.sampleNumber)).then(
-      (promiseResult) => {
-        // Processing of Promise's result can go here.
-        return `This is executed in controller action. Promise result:\r\n ${promiseResult}`;
-      },
-      (promiseError) => {
-        // Processing of Promise's error can go here
-        console.log(
-          `This is executed in controller action. Promise error:\r\n ${promiseError}`,
-        );
-      },
-    );
+      return samplePromise(parseInt(query.sampleNumber)).then(
+          (promiseResult) => {
+              // Processing of Promise's result can go here.
+              return `This is executed in controller action. Promise result:\r\n ${promiseResult}`;
+          },
+          (promiseError) => {
+              // Processing of Promise's error can go here
+              console.log(
+                  `This is executed in controller action. Promise error:\r\n ${promiseError}`,
+              );
+          },
+      );
   }
 }

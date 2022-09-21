@@ -3,8 +3,8 @@ import { Controller, Get } from '@nestjs/common';
 @Controller('sample-base')
 export class SampleBaseController {
   @Get()
-  sampleAction(): string {
-    return `
+    sampleAction(): string {
+        return `
 Sample base controller.
 
 To create a new controller run: <code>nest generate controller SampleBase</code><br>
@@ -16,5 +16,5 @@ Open <code>sample-base/sample-base.controller.ts</code> and:
 </ul>
 
 Full documentation is available at: <a href="https://docs.nestjs.com/controllers" target="_blank">https://docs.nestjs.com/controllers</a>`;
-  }
+    }
 }

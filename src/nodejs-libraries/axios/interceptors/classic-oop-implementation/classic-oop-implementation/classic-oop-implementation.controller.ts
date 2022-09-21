@@ -6,26 +6,26 @@ import { FetchPayloadApi } from '../../common-services/fetch-payload-api/fetch-p
 @Controller('classic-oop-implementation')
 export class ClassicOopImplementationController {
   @Get()
-  async fetchAuthToken(): Promise<string> {
-    console.log('Classic OOP HTTP request implementation.');
-    console.log('**********');
-    const axiosInstance = new AxiosInstanceFactory().produce();
-    const tokenService = new TokenService(axiosInstance);
-    const authToken = await tokenService.fetchAuthToken();
-    const fetchPayloadApi = new FetchPayloadApi(axiosInstance);
-    const dataRequestedFromEndpoint = await fetchPayloadApi.makeRequest(
-      axiosInstance.getUri(),
-      '/sample-third-party-server/post-auth-data-fetch',
-      '',
-      authToken,
-    );
-    const resultMessage = `Classic OOP HTTP request implementation.
+    async fetchAuthToken(): Promise<string> {
+        console.log('Classic OOP HTTP request implementation.');
+        console.log('**********');
+        const axiosInstance = new AxiosInstanceFactory().produce();
+        const tokenService = new TokenService(axiosInstance);
+        const authToken = await tokenService.fetchAuthToken();
+        const fetchPayloadApi = new FetchPayloadApi(axiosInstance);
+        const dataRequestedFromEndpoint = await fetchPayloadApi.makeRequest(
+            axiosInstance.getUri(),
+            '/sample-third-party-server/post-auth-data-fetch',
+            '',
+            authToken,
+        );
+        const resultMessage = `Classic OOP HTTP request implementation.
 Auth token: ${authToken}
 Data requested from endpoint ${JSON.stringify(dataRequestedFromEndpoint, undefined, 4)}`;
-    console.log(resultMessage);
-    console.log('----------');
-    console.log('END');
+        console.log(resultMessage);
+        console.log('----------');
+        console.log('END');
 
-    return resultMessage;
-  }
+        return resultMessage;
+    }
 }

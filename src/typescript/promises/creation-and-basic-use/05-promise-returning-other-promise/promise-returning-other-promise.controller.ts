@@ -28,46 +28,46 @@ export class PromiseReturningOtherPromiseController {
    *    controller below for more details.
    */
   @Get('await')
-  async promiseReturningOtherPromise() {
-    let text = '';
+    async promiseReturningOtherPromise() {
+        let text = '';
 
-    // Passed value is 1. Both inner and outer Promise should be resolved.
-    let promiseReturningOtherPromise =
+        // Passed value is 1. Both inner and outer Promise should be resolved.
+        let promiseReturningOtherPromise =
       await promiseReturningOtherPromiseFunction(1);
-    text += promiseReturningOtherPromise + '\r\n';
+        text += promiseReturningOtherPromise + '\r\n';
 
-    // Passed value is 2. We are expecting the inner Promise to be rejected.
-    try {
-      promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
-        2,
-      );
-    } catch (error) {
-      text += error + '\r\n';
-    }
+        // Passed value is 2. We are expecting the inner Promise to be rejected.
+        try {
+            promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
+                2,
+            );
+        } catch (error) {
+            text += error + '\r\n';
+        }
 
-    // Passed value is 3. We are expecting the inner Promise to be resolved after 2 seconds.
-    promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
-      3,
-    );
-    text += promiseReturningOtherPromise + '\r\n';
+        // Passed value is 3. We are expecting the inner Promise to be resolved after 2 seconds.
+        promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
+            3,
+        );
+        text += promiseReturningOtherPromise + '\r\n';
 
-    // Passed value is 4. We are expecting the outer promise to be rejected and inner promise object to be returned as
-    // an error. The inner promise will be successfully resolved, but the result will not be passed as an error result
-    // of the outer promise. Instead, the inner Promise will be returned as an object. You can see the result in the
-    // console.
-    try {
-      promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
-        4,
-      );
-    } catch (error) {
-      text += error + '\r\n';
-      console.log(
-        'This is just a marker so you can see it in console logs. sampleNumber is: 4',
-      );
-      console.log(error);
-    }
+        // Passed value is 4. We are expecting the outer promise to be rejected and inner promise object to be returned as
+        // an error. The inner promise will be successfully resolved, but the result will not be passed as an error result
+        // of the outer promise. Instead, the inner Promise will be returned as an object. You can see the result in the
+        // console.
+        try {
+            promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
+                4,
+            );
+        } catch (error) {
+            text += error + '\r\n';
+            console.log(
+                'This is just a marker so you can see it in console logs. sampleNumber is: 4',
+            );
+            console.log(error);
+        }
 
-    /**
+        /**
      * Passed value is 5. We are expecting the outer promise to be rejected and inner promise object to be returned as
      * an error. The inner promise will be rejected, but he error result will not be passed as an error result of the
      * outer promise. Instead, the inner Promise will be returned as an object. You can see the result in the console.
@@ -77,21 +77,21 @@ export class PromiseReturningOtherPromiseController {
      *  block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason
      *  "Inner promise error. sampleNumber: 5".
      */
-    try {
-      promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
-        5,
-      );
-    } catch (error) {
-      text += error + '\r\n';
-      console.log(
-        'This is just a marker so you can see it in console logs. Passed value is: 5',
-      );
-      console.log(error);
-    }
-    console.log(
-      'This is just a marker so you can see it in console logs. End of messages.',
-    );
+        try {
+            promiseReturningOtherPromise = await promiseReturningOtherPromiseFunction(
+                5,
+            );
+        } catch (error) {
+            text += error + '\r\n';
+            console.log(
+                'This is just a marker so you can see it in console logs. Passed value is: 5',
+            );
+            console.log(error);
+        }
+        console.log(
+            'This is just a marker so you can see it in console logs. End of messages.',
+        );
 
-    return text;
-  }
+        return text;
+    }
 }

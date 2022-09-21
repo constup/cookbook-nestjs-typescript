@@ -2,19 +2,19 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { InterfacesAsPropertiesController } from './interfaces-as-properties.controller';
 
 describe('InterfacesAsPropertiesController', () => {
-  let controller: InterfacesAsPropertiesController;
+    let controller: InterfacesAsPropertiesController;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      controllers: [InterfacesAsPropertiesController],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            controllers: [InterfacesAsPropertiesController],
+        }).compile();
 
-    controller = module.get<InterfacesAsPropertiesController>(
-      InterfacesAsPropertiesController,
-    );
-  });
+        controller = module.get<InterfacesAsPropertiesController>(
+            InterfacesAsPropertiesController,
+        );
+    });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+    it('should be defined', () => {
+        expect(controller).toBeDefined();
+    });
 });

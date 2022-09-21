@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 
 @Controller('env-files-controller')
 export class EnvFilesControllerController {
-  constructor(private configService: ConfigService) {}
+    constructor(private configService: ConfigService) {}
 
   /**
    * There are a couple of preparation steps before you can start using .env files in NestJs:
@@ -18,24 +18,24 @@ export class EnvFilesControllerController {
    * Full configuration documentation is available at https://docs.nestjs.com/techniques/configuration
    */
   @Get('fetch-environment-variable')
-  fetchEnvironmentVariable(): string {
-    let text: string;
+    fetchEnvironmentVariable(): string {
+        let text: string;
 
-    // Fetching an existing environment variable from .env file
-    text = `TEST_ENV_VALUE stored in .env file: ${this.configService.get(
-      'TEST_ENV_VALUE',
-    )}<br>`;
+        // Fetching an existing environment variable from .env file
+        text = `TEST_ENV_VALUE stored in .env file: ${this.configService.get(
+            'TEST_ENV_VALUE',
+        )}<br>`;
 
-    // Fetching a non-existing environment variable. It should return "undefined"
-    text += `Non-existing variable return: ${this.configService.get(
-      'NON_EXISTING_VARIABLE',
-    )}<br>`;
+        // Fetching a non-existing environment variable. It should return "undefined"
+        text += `Non-existing variable return: ${this.configService.get(
+            'NON_EXISTING_VARIABLE',
+        )}<br>`;
 
-    // Fetching a global environment variable (defined on OS/shell level)
-    text += `Global environment variable (NVM_DIR): ${this.configService.get(
-      'NVM_DIR',
-    )}`;
+        // Fetching a global environment variable (defined on OS/shell level)
+        text += `Global environment variable (NVM_DIR): ${this.configService.get(
+            'NVM_DIR',
+        )}`;
 
-    return text;
-  }
+        return text;
+    }
 }

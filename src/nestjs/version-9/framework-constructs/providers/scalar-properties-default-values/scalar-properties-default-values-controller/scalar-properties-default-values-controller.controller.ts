@@ -3,13 +3,13 @@ import { ScalarPropertiesDefaultValuesProvider } from '../scalar-properties-defa
 
 @Controller('scalar-properties-default-values-controller')
 export class ScalarPropertiesDefaultValuesControllerController {
-  constructor(private sampleProvider: ScalarPropertiesDefaultValuesProvider) {}
+    constructor(private sampleProvider: ScalarPropertiesDefaultValuesProvider) {}
 
   @Get()
-  doSomething(): string {
-    this.sampleProvider.sampleNumber = 9;
-    this.sampleProvider.sampleString = 'test';
+    doSomething(): string {
+        this.sampleProvider.sampleNumber = 9;
+        this.sampleProvider.sampleString = 'test';
 
-    return JSON.stringify(this.sampleProvider);
-  }
+        return JSON.stringify(this.sampleProvider);
+    }
 }

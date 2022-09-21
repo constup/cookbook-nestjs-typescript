@@ -6,26 +6,26 @@ import { FetchPayloadApi } from '../../common-services/fetch-payload-api/fetch-p
 @Controller('interceptor-implementation')
 export class InterceptorImplementationController {
   @Get()
-  async fetchAuthToken(): Promise<string> {
-    console.log('Axios Interceptor HTTP request implementation.');
-    console.log('**********');
-    const axiosInstance = new AxiosInstanceFactory().produce();
-    const tokenService = new TokenService(axiosInstance);
-    const authToken = await tokenService.fetchAuthToken();
-    const fetchPayloadApi = new FetchPayloadApi(axiosInstance);
-    const dataRequestedFromEndpoint = await fetchPayloadApi.makeRequest(
-      axiosInstance.getUri(),
-      '/sample-third-party-server/post-auth-data-fetch',
-      '',
-      authToken,
-    );
-    const resultMessage = `Axios Interceptor implementation.
+    async fetchAuthToken(): Promise<string> {
+        console.log('Axios Interceptor HTTP request implementation.');
+        console.log('**********');
+        const axiosInstance = new AxiosInstanceFactory().produce();
+        const tokenService = new TokenService(axiosInstance);
+        const authToken = await tokenService.fetchAuthToken();
+        const fetchPayloadApi = new FetchPayloadApi(axiosInstance);
+        const dataRequestedFromEndpoint = await fetchPayloadApi.makeRequest(
+            axiosInstance.getUri(),
+            '/sample-third-party-server/post-auth-data-fetch',
+            '',
+            authToken,
+        );
+        const resultMessage = `Axios Interceptor implementation.
 Auth token: ${authToken}
 Data requested from endpoint ${JSON.stringify(dataRequestedFromEndpoint, undefined, 4)}`;
-    console.log(resultMessage);
-    console.log('----------');
-    console.log('END');
+        console.log(resultMessage);
+        console.log('----------');
+        console.log('END');
 
-    return resultMessage;
-  }
+        return resultMessage;
+    }
 }
