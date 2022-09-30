@@ -38,6 +38,13 @@ import { SampleThirdPartyServerController } from './mocks/sample-third-party-ser
 import { UuidController } from './nodejs-libraries/uuid-libraries/uuid.controller';
 import { ClassicOopImplementationController } from './nodejs-libraries/axios/interceptors/classic-oop-implementation/classic-oop-implementation/classic-oop-implementation.controller';
 import { InterceptorImplementationController } from './nodejs-libraries/axios/interceptors/interceptor-implementation/interceptor-implementation/interceptor-implementation.controller';
+import {Factory} from "./nestjs/version-9/framework-constructs/providers/factory-providers/simple/factory";
+import {FactoryProviderController} from "./nestjs/version-9/framework-constructs/providers/factory-providers/simple/factory-provider/factory-provider.controller";
+
+const factoryProviderSample = {
+    provide: 'SAMPLE_FACTORY_PROVIDER',
+    useFactory: () => { return (new Factory()).produce(); }
+};
 
 @Module({
     imports: [ConfigModule.forRoot(), HttpModule],
@@ -71,6 +78,7 @@ import { InterceptorImplementationController } from './nodejs-libraries/axios/in
         UuidController,
         ClassicOopImplementationController,
         InterceptorImplementationController,
+        FactoryProviderController,
     ],
     providers: [
         AppService,
@@ -80,6 +88,7 @@ import { InterceptorImplementationController } from './nodejs-libraries/axios/in
         InterfacesAsProperties,
         ProviderAsProperty,
         ProviderWithProviderProperties,
+        factoryProviderSample
     ],
 })
 export class AppModule {}

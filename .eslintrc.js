@@ -27,7 +27,8 @@ module.exports = {
       'ignoreTemplateLiterals': true,
       'ignoreTrailingComments': true,
       'ignoreRegExpLiterals': true,
-      'ignoreComments': true
+      'ignoreComments': true,
+      'ignorePattern': "^import.*$", // long import statements
     }],
     "indent": ["error", 4]
   },
