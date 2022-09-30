@@ -11,7 +11,7 @@ export class OtherProvidersAsPropertiesController {
     private propertyInjectionPropertyExample: ProviderWithProviderProperties;
 
   /**
-   * This example uses constructor injection to let the Service Container resolve the dependency;
+   * This example uses constructor injection to let the Service1 Container resolve the dependency;
    */
   @Get('controller-injection')
   constructorInjectionExample(): string {
@@ -22,7 +22,7 @@ export class OtherProvidersAsPropertiesController {
   }
 
   /**
-   * This example uses property injection to let the Service Container resolve the dependency.
+   * This example uses property injection to let the Service1 Container resolve the dependency.
    * The property will not be injected automatically. Instead, you need to manually use the @Inject() decorator right
    * before the property definition.
    *

@@ -20,7 +20,7 @@ export class NonInjectableClassAsProviderController {
    * Even though we have a provider which has a non-injectable class as a property, if you don't use the property
    * the code will compile and run just fine. This is not a good design and can lead to problems during debugging.
    *
-   * Other, more strict, frameworks will usually disallow this and throw an error when Service Container is compiled.
+   * Other, more strict, frameworks will usually disallow this and throw an error when Service1 Container is compiled.
    */
   @Get('not-using-object-property')
   noUsingObjectProperty(): string {

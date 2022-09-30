@@ -41,10 +41,14 @@ import { InterceptorImplementationController } from './nodejs-libraries/axios/in
 import {Factory} from "./nestjs/version-9/framework-constructs/providers/factory-providers/simple/factory";
 import {FactoryProviderController} from "./nestjs/version-9/framework-constructs/providers/factory-providers/simple/factory-provider/factory-provider.controller";
 
-const factoryProviderSample = {
-    provide: 'SAMPLE_FACTORY_PROVIDER',
-    useFactory: () => { return (new Factory()).produce(); }
+const service1FromFactory = {
+    provide: 'SERVICE_1_FROM_FACTORY',
+    useFactory: () => { return (new Factory()).produce(1); }
 };
+const service2FromFactory = {
+    provide: 'SERVICE_2_FROM_FACTORY',
+    useFactory: () => { return (new Factory()).produce(2); }
+}
 
 @Module({
     imports: [ConfigModule.forRoot(), HttpModule],
@@ -88,7 +92,8 @@ const factoryProviderSample = {
         InterfacesAsProperties,
         ProviderAsProperty,
         ProviderWithProviderProperties,
-        factoryProviderSample
+        service1FromFactory,
+        service2FromFactory,
     ],
 })
 export class AppModule {}
