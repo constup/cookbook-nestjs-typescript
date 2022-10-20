@@ -22,19 +22,13 @@ export class EnvFilesControllerController {
         let text: string;
 
         // Fetching an existing environment variable from .env file
-        text = `TEST_ENV_VALUE stored in .env file: ${this.configService.get(
-            'TEST_ENV_VALUE',
-        )}<br>`;
+        text = `TEST_ENV_VALUE stored in .env file: ${this.configService.get('TEST_ENV_VALUE')}<br>`;
 
         // Fetching a non-existing environment variable. It should return "undefined"
-        text += `Non-existing variable return: ${this.configService.get(
-            'NON_EXISTING_VARIABLE',
-        )}<br>`;
+        text += `Non-existing variable return: ${this.configService.get('NON_EXISTING_VARIABLE')}<br>`;
 
         // Fetching a global environment variable (defined on OS/shell level)
-        text += `Global environment variable (NVM_DIR): ${this.configService.get(
-            'NVM_DIR',
-        )}`;
+        text += `Global environment variable (NVM_DIR): ${this.configService.get('NVM_DIR')}`;
 
         return text;
     }

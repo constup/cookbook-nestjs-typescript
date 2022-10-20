@@ -22,10 +22,11 @@ export class EnvironmentVariablesController {
 
         text += `Individual environment variable accessed by <b>NodeJS</b>. NVM_DIR variable value: ${process.env.NVM_DIR}<br>`;
 
+        const dynamicEnvVariableName = 'NVM_DIR';
+        text += `Individual environment variable accessed by <b>NodeJS</b> with dynamic variable name. NVM_DIR variable value: ${process.env[dynamicEnvVariableName]}<br>`
+
         // Note: See env-files-controller for more details.
-        text += `Individual environment variable accessed by <b>NestJS</b>. NVM_DIR variable value: ${this.configService.get(
-            'NVM_DIR',
-        )}`;
+        text += `Individual environment variable accessed by <b>NestJS</b>. NVM_DIR variable value: ${this.configService.get('NVM_DIR')}`;
 
         return text;
     }
