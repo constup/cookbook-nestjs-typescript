@@ -28,6 +28,7 @@ All top-level categories are in `/src` directory.
 - **NodeJS**: Examples related to NodeJS;
 - **Typescript**: Examples related to typescript;
 - **NodeJS libraries**: Examples related to some common NodeJS libraries (npm packages);
+- **Testing**: Examples related to unit, integration and E2E testing; 
 - **Mocks**: Mocks of web servers and services;
 
 ## Installation

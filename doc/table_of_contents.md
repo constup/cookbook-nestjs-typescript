@@ -66,6 +66,9 @@ Please follow this structure when adding to this _Table of contents_:
           - [Make simple POST request](../src/nestjs/version-9/http/http-requests/outgoing/make-post-request)
       - ***HTTP Responses***
         - [Simple JSON response](../src/nestjs/version-9/http/http-responses/simple-json-response)
+- **Testing**
+  - **Jest**
+    - [Constructor and `new SomeClass(parameter)`](../src/testing/jest/new)
 - **Mocks**
   - [Sample third party server mock](../src/mocks/sample-third-party-server)
     - _Username and password to authentication token mock_
